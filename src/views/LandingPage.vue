@@ -29,27 +29,10 @@
         </v-col>
       </v-row>
       <!-- Card -->
-      <v-col cols="12">
-        <div class="card-container ma-1">
-          <div class="card-heading mx-1">
-            <h2>Elaboração de Projetos</h2>
-          </div>
-          <div class="card-img">
-            <v-img
-              src="../assets/img/img5.jpeg"
-            ></v-img>
-          </div>
-          <div class="card-text ma-1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi doloribus hic incidunt sequi totam
-              vel?</p>
-          </div>
-        </div>
-      </v-col>
-      <!-- v-for -->
       <ServiceCard
         v-for="(obj, key) in items" :key="key"
         :title="obj.title"
-        :img="img(obj)"
+        :img="img(key)"
         :text="obj.text"
       />
     </section>
@@ -70,22 +53,18 @@ export default {
       items: [
         {
           title: 'Projeto 1',
-          img: '../assets/img/img5.jpeg',
           text: 'Texto do Projeto 1'
         },
         {
           title: 'Projeto 2',
-          img: '../assets/img/img2.jpeg',
           text: 'Texto do Projeto 2'
         },
         {
           title: 'Projeto 3',
-          img: '../assets/img/img3.jpeg',
           text: 'Texto do Projeto 3'
         },
         {
           title: 'Projeto 4',
-          img: '../assets/img/img4.jpeg',
           text: 'Texto do Projeto 4'
         }
       ]
@@ -99,11 +78,12 @@ export default {
   mounted () {
   },
   methods: {
-    img (obj) {
+    img (key) {
       let img = ''
       for (let i = 0; i < this.imgs.length; i++) {
         img = this.imgs[i]
-        if (img.toString().includes(i)) {
+        console.log(img.toString())
+        if (key === i) {
           return img
         }
       }

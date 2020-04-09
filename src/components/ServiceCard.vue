@@ -30,6 +30,8 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+  .v-image {
+    border-radius: 10px;
+  }
 </style>
