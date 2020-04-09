@@ -1,24 +1,26 @@
 <template>
-<div class="service-card-container">
-  <!-- Card -->
-  <v-col cols="12">
-    <div class="card-container ma-1"
-         :style="{'background-color':background}"
+  <div class="service-card-container">
+    <!-- Card -->
+    <v-row class="text-center"
+           :style="{'background-color':background}"
     >
-      <div class="card-heading mx-1">
-        <h2>{{ title }}</h2>
-      </div>
-      <div class="card-img">
-        <v-img
-          :src="img"
-        ></v-img>
-      </div>
-      <div class="card-text ma-1">
-        <p>{{ text }}</p>
-      </div>
-    </div>
-  </v-col>
-</div>
+      <v-col cols="12">
+        <div class="card-container ma-1">
+          <div class="card-heading mx-1">
+            <h2>{{ title }}</h2>
+          </div>
+          <div class="card-img">
+            <v-img
+              :src="img"
+            ></v-img>
+          </div>
+          <div class="card-text ma-1">
+            <p>{{ text }}</p>
+          </div>
+        </div>
+      </v-col>
+    </v-row>
+  </div>
 </template>
 
 <script>

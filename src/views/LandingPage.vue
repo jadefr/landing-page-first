@@ -31,7 +31,7 @@
       <!-- Card -->
       <ServiceCard
         v-for="(obj, key) in items" :key="key"
-        :background="color(obj)"
+        :background="color(obj.color)"
         :title="obj.title"
         :img="img(key)"
         :text="obj.text"
@@ -61,7 +61,7 @@ export default {
           title: 'Projetos pontuais de Pastejo Rotacionado Fertirrigado',
           text: 'Utilização de dejetos do curral nas pastagens via motobomba ou gravidade, \n' +
             'visando o aumento da fertilidade do solo e da produtividade da forrageira escolhida',
-          color: 'green'
+          color: 'red'
         },
         {
           title: 'Projetos de Crédito Rural',
@@ -72,7 +72,7 @@ export default {
           title: 'Cursos Online',
           text: 'Oferecemos conhecimento técnico aos produtores e trabalhadores rurais e capacitação dos técnicos ligados ao meio rural,  \n' +
             'com o intuito de levar mais tecnologia e conhecimento ao campo.\n',
-          color: 'pink'
+          color: 'orange'
         }
       ]
     }
@@ -95,7 +95,18 @@ export default {
       }
     },
     color (obj) {
-      const color = 'blue'
+      let color = ''
+      console.log(obj)
+
+      if (obj.includes('blue')) {
+        color = 'blue'
+      } else if (obj.includes('red')) {
+        color = 'red'
+      } else if (obj.includes('yellow')){
+        color = 'yellow'
+      } else {
+        color = 'orange'
+      }
       return color
     }
   }
@@ -129,6 +140,18 @@ export default {
 
     .blue {
       background-color: blue;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+
+    .orange {
+      background-color: orange;
     }
   }
 </style>
