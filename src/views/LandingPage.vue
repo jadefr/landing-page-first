@@ -60,57 +60,10 @@
         <v-col>
           <!-- Title -->
           <h1 class="mb-2">Depoimentos</h1>
-          <!-- Card -->
-          <v-card
-            class="mx-auto"
-            outlined
-          >
-            <v-card-title>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, reprehenderit, vero! Corporis
-              ipsam laborum modi omnis pariatur possimus ut voluptatem.
-            </v-card-title>
-            <v-avatar
-              size="120"
-            >
-              <img
-                src="https://cdn.vuetifyjs.com/images/john.jpg"
-                alt="John"
-              >
-            </v-avatar>
-            <v-card-text>Lorem ipsum dolor sit amet.</v-card-text>
-          </v-card>
-        </v-col>
-      </v-row>
-    </section>
-
-    <!-- Test2 -->
-    <section>
-      <v-carousel
-        cycle
-        height="400"
-        hide-delimiter-background
-        show-arrows-on-hover
-      >
-        <v-carousel-item
-          v-for="(obj, key) in testimonials" :key="key"
-        >
-         <Testimonial
-           :text="obj.text"
-           :img="obj.img"
-           :name="obj.name"
-         />
-        </v-carousel-item>
-      </v-carousel>
-    </section>
-
-    <!-- Test3 -->
-    <section>
-      <v-row class="text-center my-4 mx-10">
-        <v-col>
-          <!-- Title -->
-          <h1 class="mb-2">Depoimentos Test3</h1>
 
           <!-- Carousel -->
           <v-carousel
+            light
             cycle
             height="400"
             hide-delimiter-background
@@ -119,24 +72,6 @@
             <v-carousel-item
               v-for="(obj, key) in testimonials" :key="key"
             >
-              <!-- Card -->
-<!--              <v-card-->
-<!--                class="mx-auto"-->
-<!--                outlined-->
-<!--              >-->
-<!--                <v-card-title>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, reprehenderit, vero! Corporis-->
-<!--                  ipsam laborum modi omnis pariatur possimus ut voluptatem.-->
-<!--                </v-card-title>-->
-<!--                <v-avatar-->
-<!--                  size="120"-->
-<!--                >-->
-<!--                  <img-->
-<!--                    :src="obj.img"-->
-<!--                    alt="John"-->
-<!--                  >-->
-<!--                </v-avatar>-->
-<!--                <v-card-text>Lorem ipsum dolor sit amet.</v-card-text>-->
-<!--              </v-card>-->
               <Testimonial
                 :text="obj.text"
                 :img="obj.img"

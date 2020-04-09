@@ -1,14 +1,6 @@
 <template>
   <div class="service-card-container">
     <!-- Card -->
-    <v-lazy
-      v-model="isActive"
-      :options="{
-          threshold: .5
-        }"
-      min-height="200"
-      transition="fade-transition"
-    >
     <v-row class="text-center white--text"
            :style="{'background-color':background}"
     >
@@ -29,7 +21,6 @@
         </div>
       </v-col>
     </v-row>
-    </v-lazy>
   </div>
 </template>
 
@@ -41,10 +32,10 @@ export default {
     img: String,
     text: String,
     background: String
-  },
-  data: () => ({
-    isActive: false
-  })
+  }
+  // data: () => ({
+  //   isActive: false
+  // })
 }
 </script>
 
