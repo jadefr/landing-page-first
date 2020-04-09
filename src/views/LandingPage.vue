@@ -43,7 +43,7 @@
     </section>
 
     <!-- Serviços -->
-    <section id="servicos">
+    <section id="servicos" class="mt-10">
       <!-- Card -->
       <ServiceCard
         v-for="(obj, key) in services" :key="key"
@@ -59,7 +59,7 @@
       <v-row class="text-center my-4 mx-10">
         <v-col>
           <!-- Title -->
-          <h1 class="mb-2">Depoimentos</h1>
+          <h1 class="mb-3">Depoimentos</h1>
 
           <!-- Carousel -->
           <v-carousel
