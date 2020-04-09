@@ -19,7 +19,21 @@
         target="_blank"
         text
       >
-        <span class="mr-2">Latest Release</span>
+        <span class="mr-2">Sobre Nós</span>
+      </v-btn>
+      <v-btn
+        href=""
+        target="_blank"
+        text
+      >
+        <span class="mr-2">Serviços</span>
+      </v-btn>
+      <v-btn
+        href=""
+        target="_blank"
+        text
+      >
+        <span class="mr-2">Contato</span>
       </v-btn>
     </v-app-bar>
     <v-content>
