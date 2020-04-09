@@ -5,7 +5,7 @@
     <v-parallax
       dark
       height="600"
-      src="../assets/img/img3.jpeg"
+      src="../assets/img/bg.jpeg"
     >
       <v-row
         align="center"
@@ -13,7 +13,7 @@
       >
         <v-col class="text-center" cols="12">
           <h1 class="display-4 font-weight-regular mb-4">Projeto Lucro Máximo</h1>
-          <h4 class="subheading mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+          <h4 class="subheading mt-4">Consultoria agropecuária</h4>
         </v-col>
       </v-row>
     </v-parallax>
@@ -31,6 +31,7 @@
       <!-- Card -->
       <ServiceCard
         v-for="(obj, key) in items" :key="key"
+        :background="color(obj)"
         :title="obj.title"
         :img="img(key)"
         :text="obj.text"
@@ -52,20 +53,26 @@ export default {
     return {
       items: [
         {
-          title: 'Projeto 1',
-          text: 'Texto do Projeto 1'
+          title: 'Assistência Técnica Mensal',
+          text: 'Consultorias semanais ou quinzenais na área da pecuária de leite e/ou pecuária de corte',
+          color: 'blue'
         },
         {
-          title: 'Projeto 2',
-          text: 'Texto do Projeto 2'
+          title: 'Projetos pontuais de Pastejo Rotacionado Fertirrigado',
+          text: 'Utilização de dejetos do curral nas pastagens via motobomba ou gravidade, \n' +
+            'visando o aumento da fertilidade do solo e da produtividade da forrageira escolhida',
+          color: 'green'
         },
         {
-          title: 'Projeto 3',
-          text: 'Texto do Projeto 3'
+          title: 'Projetos de Crédito Rural',
+          text: 'Projetos para o produtor na Caixa Econômica Federal, Banco do Brasil ou Sicoob',
+          color: 'yellow'
         },
         {
-          title: 'Projeto 4',
-          text: 'Texto do Projeto 4'
+          title: 'Cursos Online',
+          text: 'Oferecemos conhecimento técnico aos produtores e trabalhadores rurais e capacitação dos técnicos ligados ao meio rural,  \n' +
+            'com o intuito de levar mais tecnologia e conhecimento ao campo.\n',
+          color: 'pink'
         }
       ]
     }
@@ -82,11 +89,14 @@ export default {
       let img = ''
       for (let i = 0; i < this.imgs.length; i++) {
         img = this.imgs[i]
-        console.log(img.toString())
         if (key === i) {
           return img
         }
       }
+    },
+    color (obj) {
+      const color = 'blue'
+      return color
     }
   }
 }
@@ -114,13 +124,11 @@ export default {
         .card-heading {
           text-align: center;
         }
-
-        .card-img {
-          .v-image {
-            border-radius: 10px;
-          }
-        }
       }
+    }
+
+    .blue {
+      background-color: blue;
     }
   }
 </style>

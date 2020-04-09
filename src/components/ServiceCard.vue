@@ -1,8 +1,10 @@
 <template>
-<div class="service-card-view-container">
+<div class="service-card-container">
   <!-- Card -->
   <v-col cols="12">
-    <div class="card-container ma-1">
+    <div class="card-container ma-1"
+         :style="{'background-color':background}"
+    >
       <div class="card-heading mx-1">
         <h2>{{ title }}</h2>
       </div>
@@ -25,7 +27,8 @@ export default {
   props: {
     title: String,
     img: String,
-    text: String
+    text: String,
+    background: String
   }
 }
 </script>
