@@ -9,7 +9,7 @@
           <div class="card-heading mx-1">
             <h2>{{ title }}</h2>
           </div>
-          <div class="card-img my-3 mx-8">
+          <div class="card-img my-3 mx-3">
             <v-img
               max-height="240"
               :src="img"

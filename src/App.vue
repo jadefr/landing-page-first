@@ -8,12 +8,11 @@
       scroll-target="#scrolling-techniques-7"
       color="teal darken-4"
     >
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+<!--      <v-app-bar-nav-icon></v-app-bar-nav-icon>-->
 
-      <v-toolbar-title>Title</v-toolbar-title>
+<!--      <v-toolbar-title>Title</v-toolbar-title>-->
 
       <v-spacer></v-spacer>
-
       <v-btn
         href=""
         target="_blank"

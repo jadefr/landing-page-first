@@ -43,7 +43,27 @@ export default {
   data: () => ({
     icons: [
       'fab fa-facebook',
-      'fab fa-instagram'
+      'fab fa-instagram',
+      'fab fa-linkedin',
+      'fab fa-whatsapp'
+    ],
+    links: [
+      {
+        icon: 'fab fa-facebook',
+        link: 'https://www.facebook.com/LucroMaximo/'
+      },
+      {
+        icon: 'fab fa-instagram',
+        link: 'https://www.instagram.com/projetolucromaximo/'
+      },
+      {
+        icon: 'fab fa-linkedin',
+        link: 'https://www.linkedin.com/in/adilson-esquerdo-ferreira-4b1431163/'
+      },
+      {
+        icon: 'fab fa-whatsapp',
+        link: 'https://wa.me/553298009178'
+      }
     ]
   })
 }

@@ -20,14 +20,19 @@
 
     <!-- Sobre Nós -->
     <section id="sobre-nos">
-      <v-row class="text-center my-4 mx-10">
+      <v-row class="text-center my-4 mx-3">
         <!-- Text -->
         <v-col>
-          <h1 class="mb-2">Sobre Nós</h1>
+          <h1 class="mb-3">Sobre Nós</h1>
           <p>
             O Projeto Lucro Máximo surgiu em 2010, com o intuito de difundir a tecnologia no campo, levando mais
             conhecimento e tecnologia ao produtor.
           </p>
+          <!-- Image -->
+          <v-img
+            class="my-3"
+            src="../assets/img/sobreNos.jpeg"
+          ></v-img>
           <p>
             O projeto é dirigido por Adilson Esquerdo Ferreira, zootecnista, formado pela Universidade Federal Rural do
             Rio de Janeiro em 2007,
@@ -35,10 +40,6 @@
             Agrícola e Administrador de empresas).
           </p>
         </v-col>
-        <!-- Image -->
-        <v-img
-          src="../assets/img/sobreNos.jpeg"
-        ></v-img>
       </v-row>
     </section>
 
@@ -170,8 +171,6 @@ export default {
     },
     color (obj) {
       let color = ''
-      console.log(obj)
-
       if (obj.includes('maroon')) {
         color = '#715f58'
       } else {
