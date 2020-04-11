@@ -39,18 +39,21 @@
       <LandingPage/>
     </v-content>
     <!-- Footer -->
-    <Footer/>
+<!--    <Footer/>-->
+    <FooterTest/>
   </v-app>
 </template>
 
 <script>
 import LandingPage from './views/LandingPage'
-import Footer from './views/Footer'
+// import Footer from './views/Footer'
+import FooterTest from './views/FooterTest'
 
 export default {
   name: 'App',
   components: {
-    Footer,
+    FooterTest,
+    // Footer,
     LandingPage
   }
 }
