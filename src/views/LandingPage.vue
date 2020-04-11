@@ -12,8 +12,8 @@
           justify="center"
         >
           <v-col class="text-center" cols="12" id="parallax-text">
-            <h1 class="display-4 font-weight-regular mb-4">Projeto Lucro Máximo</h1>
-            <h4 class="subheading mt-4">Consultoria agropecuária</h4>
+            <h1 class="display-4 font-weight-medium mb-4">Projeto Lucro Máximo</h1>
+            <h4 class="display-1 font-regular mt-4">Consultoria agropecuária</h4>
           </v-col>
         </v-row>
       </v-parallax>
@@ -25,21 +25,24 @@
         <!-- Text -->
         <v-col>
           <h1 class="mb-3">Sobre Nós</h1>
-          <p>
-            O Projeto Lucro Máximo surgiu em 2010, com o intuito de difundir a tecnologia no campo, levando mais
-            conhecimento e tecnologia ao produtor.
-          </p>
-          <!-- Image -->
-          <v-img
-            class="my-3"
-            src="../assets/img/sobreNos.jpeg"
-          ></v-img>
-          <p>
-            O projeto é dirigido por Adilson Esquerdo Ferreira, zootecnista, formado pela Universidade Federal Rural do
-            Rio de Janeiro em 2007,
-            além de contar com o auxílio de outros profissionais da área agrícola (Médico Veterinário, Agrônomo, Técnico
-            Agrícola e Administrador de empresas).
-          </p>
+          <div class="sobre-nos-content">
+            <p class="sobre-nos-paragraph" id="first-paragraph">
+              O Projeto Lucro Máximo surgiu em 2010, com o intuito de difundir a tecnologia no campo, levando mais
+              conhecimento e tecnologia ao produtor.
+            </p>
+            <!-- Image -->
+            <v-img
+              class="my-3"
+              id="sobre-nos-img"
+              src="../assets/img/sobreNos.jpeg"
+            ></v-img>
+            <p class="sobre-nos-paragraph" id="second-paragraph">
+              O projeto é dirigido por Adilson Esquerdo Ferreira, zootecnista, formado pela Universidade Federal Rural do
+              Rio de Janeiro em 2007,
+              além de contar com o auxílio de outros profissionais da área agrícola (Médico Veterinário, Agrônomo, Técnico
+              Agrícola e Administrador de empresas).
+            </p>
+          </div>
         </v-col>
       </v-row>
     </section>
@@ -184,6 +187,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import "../assets/sass/libraries/mixins";
+
   .landing-page-view-container {
 
     .header {
@@ -197,7 +202,6 @@ export default {
           opacity: 1;
 
           h1 {
-            color: white;
             filter: initial;
           }
         }
@@ -207,6 +211,14 @@ export default {
     #sobre-nos {
       .v-image {
         border-radius: 7px;
+      }
+
+      .sobre-nos-content {
+        @include md {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-areas: "sobre-nos-img sobre-nos-paragraph";
+        }
       }
     }
 
