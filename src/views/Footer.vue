@@ -1,68 +1,84 @@
 <template>
-    <div class="footer-view-container">
-      <v-footer
-        dark
-        padless
-      >
-        <v-card
-          flat
-          tile
-          class="white--text text-center"
-        >
-          <v-row
-            justify="center"
-            no-gutters
-          >
-          <v-card-text>
-
-            <!-- Text -->
-            <div class="footer-text">
-              <!-- Mapa do Site -->
-              <div id="mapa-do-site" class="white--text pt-0">
-                <v-card-title class="align-center">
-                  <p>Mapa do Site</p>
-                </v-card-title>
-                <v-card-text>
-                  <p>Sobre Nós</p>
-                  <p>Serviços</p>
-                  <p>Depoimentos</p>
-                </v-card-text>
-              </div>
-              <!-- Contato -->
-              <div id="contato" class="white--text pt-0">
-                <v-card-title class="align-center">
-                  <p>Mapa do Site</p>
-                </v-card-title>
-                <v-card-text>
-                  <p>Sobre Nós</p>
-                  <p>Serviços</p>
-                  <p>Depoimentos</p>
-                </v-card-text>
-              </div>
-            </div>
-
-            <!-- Icon Box -->
-            <v-btn
-              v-for="icon in icons"
-              :key="icon"
-              class="mx-4"
-              icon
+  <div class="footer-view-container">
+    <v-card
+      flat
+      tile
+      dark
+      class="white--text text-center"
+    >
+      <!-- Text -->
+      <div class="footer-text">
+        <!-- Mapa do Site -->
+          <div id="mapa-do-site">
+            <v-row
+              justify="center"
+              tile
             >
-              <!-- Icons -->
-              <v-icon size="24px">{{ icon }}</v-icon>
-            </v-btn>
-          </v-card-text>
+            <v-card-title>
+              Mapa do Site
+            </v-card-title>
+            </v-row>
+            <v-row
+              justify="center"
+              tile
+            >
+            <v-card-text>
+              <p>Sobre nós</p>
+              <p>Serviços</p>
+              <p>Depoimentos</p>
+            </v-card-text>
+            </v-row>
+          </div>
 
-          <v-divider></v-divider>
+        <!-- Contato -->
+          <div id="contato">
+            <v-row
+              justify="center"
+              tile
+            >
+            <v-card-title>
+              Contato
+            </v-card-title>
+            </v-row>
+            <v-row
+              justify="center"
+              tile
+            >
+            <v-card-text>
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>Lorem ipsum dolor.</p>
+              <p>Lorem ipsum dolor sit.</p>
+            </v-card-text>
+            </v-row>
+          </div>
+      </div>
 
-          <v-card-text class="white--text">
-            {{ new Date().getFullYear() }}
-            <p>Desenvolvido por <a href="">Jade Ferreira</a> </p>
-          </v-card-text>
-          </v-row>
+      <!-- Icons -->
+      <div class="footer-icons">
+        <v-card>
+          <v-btn
+            v-for="icon in icons"
+            :key="icon"
+            class="mx-4 mb-3"
+            icon
+          >
+            <!-- Icons -->
+            <v-icon size="24px">{{ icon }}</v-icon>
+          </v-btn>
         </v-card>
-      </v-footer>
-    </div>
+      </div>
+
+      <!-- Divider -->
+      <v-divider></v-divider>
+
+      <!-- Credits -->
+      <v-card>
+        <v-card-text class="white--text mt-1 font-weight-light" id="credits">
+          <p>Desenvolvido por <a href="">Jade Ferreira</a></p>
+        </v-card-text>
+      </v-card>
+    </v-card>
+  </div>
 </template>
 
 <script>
@@ -74,29 +90,24 @@ export default {
       'fab fa-instagram',
       'fab fa-linkedin',
       'fab fa-whatsapp'
-    ],
-    links: [
-      {
-        icon: 'fab fa-facebook',
-        link: 'https://www.facebook.com/LucroMaximo/'
-      },
-      {
-        icon: 'fab fa-instagram',
-        link: 'https://www.instagram.com/projetolucromaximo/'
-      },
-      {
-        icon: 'fab fa-linkedin',
-        link: 'https://www.linkedin.com/in/adilson-esquerdo-ferreira-4b1431163/'
-      },
-      {
-        icon: 'fab fa-whatsapp',
-        link: 'https://wa.me/553298009178'
-      }
     ]
   })
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+  .footer-view-container {
+    #credits{
+      p {
+        color: #715f58;
+        a {
+          text-decoration: none;
+          color: inherit;
+          &:hover {
+            color: #3a4b40;
+          }
+        }
+      }
+    }
+  }
 </style>
