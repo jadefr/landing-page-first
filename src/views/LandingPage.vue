@@ -1,22 +1,23 @@
 <template>
   <div class="landing-page-view-container">
 
-    <!-- Parallax -->
-    <v-parallax
-      dark
-      height="600"
-      src="../assets/img/bg.jpeg"
-    >
-      <v-row
-        align="center"
-        justify="center"
+    <div class="header h-100">
+      <!-- Parallax -->
+      <v-parallax
+        dark
+        src="../assets/img/bg.jpeg"
       >
-        <v-col class="text-center" cols="12" id="parallax-text">
-          <h1 class="display-4 font-weight-regular mb-4">Projeto Lucro Máximo</h1>
-          <h4 class="subheading mt-4">Consultoria agropecuária</h4>
-        </v-col>
-      </v-row>
-    </v-parallax>
+        <v-row
+          align="center"
+          justify="center"
+        >
+          <v-col class="text-center" cols="12" id="parallax-text">
+            <h1 class="display-4 font-weight-regular mb-4">Projeto Lucro Máximo</h1>
+            <h4 class="subheading mt-4">Consultoria agropecuária</h4>
+          </v-col>
+        </v-row>
+      </v-parallax>
+    </div>
 
     <!-- Sobre Nós -->
     <section id="sobre-nos">
@@ -185,16 +186,20 @@ export default {
 <style lang="scss" scoped>
   .landing-page-view-container {
 
-    .v-parallax {
-      opacity: 0.8;
-      filter: brightness(85%);
+    .header {
 
-      #parallax-text {
-        opacity: 1;
+      .v-parallax {
+        opacity: 0.8;
+        filter: brightness(85%);
+        min-height: 100vh;
 
-        h1 {
-          color: white;
-          filter: initial;
+        #parallax-text {
+          opacity: 1;
+
+          h1 {
+            color: white;
+            filter: initial;
+          }
         }
       }
     }
