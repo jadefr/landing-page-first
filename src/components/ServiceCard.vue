@@ -10,8 +10,8 @@
         justify="center"
         class="pt-6 pb-4"
       >
-        <span class="display-1 font-weight-light" id="title">{{ title }}</span>
-        <hr>
+<!--        <span class="display-1 font-weight-light">{{ title }}</span>-->
+        <span :class="[$vuetify.breakpoint.mdAndUp ? 'display-1 font-weight-light' : 'headline font-weight-light']">{{ title }}</span>
       </v-row>
 
       <div class="service-content">
