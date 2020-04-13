@@ -95,6 +95,14 @@
         </v-col>
       </v-row>
     </section>
+
+    <!-- Parallax -->
+    <v-parallax
+      height="600"
+      dark
+      src="../assets/img/img12.jpeg"
+    >
+    </v-parallax>
   </div>
 </template>
 
