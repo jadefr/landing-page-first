@@ -32,9 +32,9 @@
               }}</p>
           </div>
           <!-- Button -->
-          <v-btn class="my-3" color="error" dark large
+          <v-btn class="my-3" outlined color="white" dark large
                  v-if="isCursoOnline"
-          >Large Button
+          >Inscreva-se
           </v-btn>
         </v-row>
       </div>
@@ -80,6 +80,10 @@ export default {
 
     .v-image {
       border-radius: 7px;
+    }
+
+    .v-btn {
+      background-color: #008978;
     }
 
     .service-content {
