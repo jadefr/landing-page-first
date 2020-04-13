@@ -72,13 +72,12 @@
       <v-row class="text-center my-4 mx-10">
         <v-col>
           <!-- Title -->
-          <h1 class="mb-3">Depoimentos</h1>
+          <h1 class="display-1 font-weight-light mb-9">Depoimentos</h1>
 
           <!-- Carousel -->
           <v-carousel
             light
             cycle
-            min-height="400"
             hide-delimiter-background
             show-arrows-on-hover
           >
@@ -98,7 +97,7 @@
 
     <!-- Parallax -->
     <v-parallax
-      height="600"
+      height="500"
       dark
       src="../assets/img/img12.jpeg"
     >
@@ -145,29 +144,36 @@ export default {
       ],
       testimonials: [
         {
-          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, reprehenderit, vero! Corporis ipsam laborum modi omnis pariatur possimus ut voluptatem. ',
+          text: 'Tive uma grande honra de poder estagiar com o Adilson; o principal aprendizado foi o amor e a determinação que ele tem pela profissão e pelo seu trabalho. Realmente é uma pessoa que respira a zootecnia. Ao longo desses anos sempre me inspirei muito nele.',
           img: 'https://cdn.vuetifyjs.com/images/john.jpg',
-          name: 'John Doe'
+          name: 'Rodrigo Lima Granato',
+          position: 'Consultor técnico de bovinos de corte da Agroceres, em Barra do Garças - MT'
         },
         {
-          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, reprehenderit, vero! Corporis ipsam laborum modi omnis pariatur possimus ut voluptatem. ',
+          text: 'Após um período da aplicação de seus sábios ensinamento na Fazenda Sucupira, hoje estamos colhendo frutos representados pelas arrobas de boi excessivas, em vista principalmente do resultado do capim que ao receber o devido tratamento traduziu-se no  hoje festejado resultado positivo da atividade. Sua assistência marcou um novo e promissor destino em nossas propriedades.',
           img: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-          name: 'Mary'
+          name: 'José Manoel Tiago Bittencourt',
+          position: 'Advogado e pecuarista'
         },
         {
-          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, reprehenderit, vero! Corporis ipsam laborum modi omnis pariatur possimus ut voluptatem. ',
+          text: 'Há 3 anos iniciamos um trabalho voltado na produção de leite, no qual iniciamos um parceira de sucesso junto a empresa  Lucro Máximo, no qual o Adilson nos orientou e vem nos dando total apoio não só para desenvolver o sistema, desde os cuidados  com rebanho e plantio, como todo o sistema geral da fazenda. Começamos com 100 litros dia até chegarmos a 1400 litros dia. Só tenho a agradecer a parceria da empresa Lucro Máximo e da pessoa maravilhosa que é Sr Adilson; total companheirismo e dedicação para que possamos alcançar nosso objetivo. Todas as tomadas de decisões ele sempre presente e nos orientando da melhor forma possível. Muito obrigado Lucro Máximo e ao Sr Adilson Ferreira',
           img: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-          name: 'Joseph'
+          name: 'Carlos Joel',
+          position: 'Sócio na fazenda Santa Edwiges, em Santos Dumont - MG'
         },
         {
-          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, reprehenderit, vero! Corporis ipsam laborum modi omnis pariatur possimus ut voluptatem. ',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, reprehenderit, vero!' +
+            ' Corporis ipsam laborum modi omnis pariatur possimus ut voluptatem. ',
           img: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-          name: 'James'
+          name: 'James',
+          position: ''
         },
         {
-          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, reprehenderit, vero! Corporis ipsam laborum modi omnis pariatur possimus ut voluptatem. ',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, reprehenderit, vero!' +
+            ' Corporis ipsam laborum modi omnis pariatur possimus ut voluptatem. ',
           img: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-          name: 'Peter'
+          name: 'Peter',
+          position: ''
         }
       ]
     }
@@ -210,7 +216,7 @@ export default {
     .header {
 
       .v-parallax {
-        opacity: 0.8;
+        opacity: 0.85;
         filter: brightness(85%);
         min-height: 100vh;
 
@@ -233,21 +239,6 @@ export default {
     #sobre-nos-test {
       .v-image {
         border-radius: 7px;
-      }
-
-      .sobre-nos-content {
-        @include md {
-          display: grid;
-          grid-template-row: 1fr;
-          grid-template-columns: 1fr 1fr;
-          grid-template-areas: "sobre-nos-img-test first-paragraph-test second-paragraph-test";
-        }
-        @include sm {
-          display: grid;
-          grid-template-columns: 1fr;
-          grid-template-row: 1fr 1fr 1fr;
-          grid-template-areas: "first-paragraph-test" "sobre-nos-img-test" "second-paragraph-test";
-        }
       }
     }
 

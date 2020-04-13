@@ -32,7 +32,7 @@
               }}</p>
           </div>
           <!-- Button -->
-          <v-btn class="my-3" outlined color="white" dark large
+          <v-btn class="mt-3 mb-5" outlined color="white" dark large
                  v-if="isCursoOnline"
           >Inscreva-se
           </v-btn>

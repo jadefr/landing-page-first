@@ -3,10 +3,12 @@
     <!-- AppBar -->
     <v-app-bar
       app
+      dense
       dark
       elevate-on-scroll
       scroll-target="#scrolling-techniques-7"
       color="teal darken-4"
+      id="navbar"
     >
 <!--      <v-app-bar-nav-icon></v-app-bar-nav-icon>-->
 

@@ -29,6 +29,11 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+.testimonial-container {
+  .v-card {
+    padding-right: 20%;
+    padding-left: 20%;
+  }
+}
 </style>
