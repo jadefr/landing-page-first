@@ -3,9 +3,9 @@
     <!-- Card -->
     <v-card
       class="mx-auto"
-      outlined
     >
-      <v-card-title>{{ text }}</v-card-title>
+<!--      <v-card-text class="title font-weight-light">{{ text }}</v-card-text>-->
+      <v-card-text class="title font-weight-light" v-html="text"></v-card-text>
       <v-avatar
         size="120"
       >

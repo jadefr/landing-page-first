@@ -31,9 +31,11 @@
             <p class="sobre-nos-paragraph title font-weight-light" id="first-paragraph">
               O Projeto Lucro Máximo surgiu em 2010, com o intuito de difundir a tecnologia no campo, levando mais
               conhecimento e tecnologia ao produtor.
-              O projeto é dirigido por Adilson Esquerdo Ferreira, zootecnista, formado pela Universidade Federal Rural do
+              O projeto é dirigido por Adilson Esquerdo Ferreira, zootecnista, formado pela Universidade Federal Rural
+              do
               Rio de Janeiro em 2007,
-              além de contar com o auxílio de outros profissionais da área agrícola (Médico Veterinário, Agrônomo, Técnico
+              além de contar com o auxílio de outros profissionais da área agrícola (Médico Veterinário, Agrônomo,
+              Técnico
               Agrícola e Administrador de empresas).
             </p>
             <!-- Image -->
@@ -144,13 +146,13 @@ export default {
       ],
       testimonials: [
         {
-          text: 'Tive uma grande honra de poder estagiar com o Adilson; o principal aprendizado foi o amor e a determinação que ele tem pela profissão e pelo seu trabalho. Realmente é uma pessoa que respira a zootecnia. Ao longo desses anos sempre me inspirei muito nele.',
+          text: 'Tive uma grande honra de poder estagiar com o Adilson;<br/> o principal aprendizado foi o amor e a determinação que ele tem pela profissão e pelo seu trabalho. Realmente é uma pessoa que respira a zootecnia. Ao longo desses anos sempre me inspirei muito nele.',
           img: 'https://cdn.vuetifyjs.com/images/john.jpg',
           name: 'Rodrigo Lima Granato',
           position: 'Consultor técnico de bovinos de corte da Agroceres, em Barra do Garças - MT'
         },
         {
-          text: 'Após um período da aplicação de seus sábios ensinamento na Fazenda Sucupira, hoje estamos colhendo frutos representados pelas arrobas de boi excessivas, em vista principalmente do resultado do capim que ao receber o devido tratamento traduziu-se no  hoje festejado resultado positivo da atividade. Sua assistência marcou um novo e promissor destino em nossas propriedades.',
+          text: 'Após um período da aplicação de seus sábios ensinamento na Fazenda Sucupira, hoje estamos colhendo frutos representados pelas arrobas de boi excessivas, em vista principalmente do resultado do capim que ao receber o devido tratamento traduziu-se no  hoje festejado resultado positivo da atividade.  Sua assistência marcou um novo e promissor destino em nossas propriedades.',
           img: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
           name: 'José Manoel Tiago Bittencourt',
           position: 'Advogado e pecuarista'
@@ -162,15 +164,17 @@ export default {
           position: 'Sócio na fazenda Santa Edwiges, em Santos Dumont - MG'
         },
         {
-          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, reprehenderit, vero!' +
-            ' Corporis ipsam laborum modi omnis pariatur possimus ut voluptatem. ',
+          text: 'MACBETH - Conhecer o que fiz... Melhor me fora se não me conhecesse.\n<br>' +
+            '(<i>Pancadas dentro.</i>)\n<br>' +
+            'Acordam Duncan batendo desse modo. Ah! se acordasses!\n<br>' +
+            '(<i>Saem.</i>)',
           img: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
           name: 'James',
           position: ''
         },
         {
           text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, reprehenderit, vero!' +
-            ' Corporis ipsam laborum modi omnis pariatur possimus ut voluptatem. ',
+              ' Corporis ipsam laborum modi omnis pariatur possimus ut voluptatem. ',
           img: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
           name: 'Peter',
           position: ''
