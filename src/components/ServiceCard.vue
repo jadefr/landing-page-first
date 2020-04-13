@@ -10,7 +10,6 @@
         justify="center"
         class="pt-6 pb-4"
       >
-<!--        <span class="display-1 font-weight-light">{{ title }}</span>-->
         <span :class="[$vuetify.breakpoint.mdAndUp ? 'display-1 font-weight-light' : 'headline font-weight-light']">{{ title }}</span>
       </v-row>
 
@@ -29,8 +28,14 @@
           </div>
           <!-- Text -->
           <div class="card-text col-sm-12 col-md-6" id="service-text">
-            <p class="headline font-weight-light">{{ text }}</p>
+            <p :class="[$vuetify.breakpoint.mdAndUp ? 'headline font-weight-light' : 'title font-weight-light']">{{ text
+              }}</p>
           </div>
+          <!-- Button -->
+          <v-btn class="my-3" color="error" dark large
+                 v-if="isCursoOnline"
+          >Large Button
+          </v-btn>
         </v-row>
       </div>
     </div>
@@ -46,6 +51,18 @@ export default {
     img: String,
     text: String,
     background: String
+  },
+  data () {
+    return {
+      isCursoOnline: false
+    }
+  },
+  created () {
+    console.log(this.$props.title)
+    if (this.$props.title === 'Curso Online') {
+      this.isCursoOnline = true
+    }
+    console.log(this.isCursoOnline)
   }
   // data: () => ({
   //   isActive: false
@@ -55,6 +72,7 @@ export default {
 
 <style lang="scss" scoped>
   @import "../assets/sass/libraries/mixins";
+
   .service-card-container {
     hr {
       color: white;

@@ -99,10 +99,11 @@ export default {
   name: 'Footer',
   data: () => ({
     icons: [
+      'fab fa-whatsapp',
       'fab fa-facebook',
       'fab fa-instagram',
       'fab fa-linkedin',
-      'fab fa-whatsapp'
+      'fab fa-youtube'
     ]
   })
 }
