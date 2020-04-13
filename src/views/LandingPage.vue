@@ -146,28 +146,25 @@ export default {
       ],
       testimonials: [
         {
-          text: 'Tive uma grande honra de poder estagiar com o Adilson;<br/> o principal aprendizado foi o amor e a determinação que ele tem pela profissão e pelo seu trabalho. Realmente é uma pessoa que respira a zootecnia. Ao longo desses anos sempre me inspirei muito nele.',
+          text: 'Tive uma grande honra de poder estagiar com o Adilson; o principal aprendizado foi o amor e a determinação que ele tem pela profissão e pelo seu trabalho. <br/>Realmente é uma pessoa que respira a zootecnia.<br/> Ao longo desses anos sempre me inspirei muito nele.',
           img: 'https://cdn.vuetifyjs.com/images/john.jpg',
           name: 'Rodrigo Lima Granato',
           position: 'Consultor técnico de bovinos de corte da Agroceres, em Barra do Garças - MT'
         },
         {
-          text: 'Após um período da aplicação de seus sábios ensinamento na Fazenda Sucupira, hoje estamos colhendo frutos representados pelas arrobas de boi excessivas, em vista principalmente do resultado do capim que ao receber o devido tratamento traduziu-se no  hoje festejado resultado positivo da atividade.  Sua assistência marcou um novo e promissor destino em nossas propriedades.',
+          text: 'Após um período da aplicação de seus sábios ensinamento na Fazenda Sucupira, hoje estamos colhendo frutos representados pelas arrobas de boi excessivas, em vista principalmente do resultado do capim que ao receber o devido tratamento traduziu-se no  hoje festejado resultado positivo da atividade. <br/> Sua assistência marcou um novo e promissor destino em nossas propriedades.',
           img: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
           name: 'José Manoel Tiago Bittencourt',
           position: 'Advogado e pecuarista'
         },
         {
-          text: 'Há 3 anos iniciamos um trabalho voltado na produção de leite, no qual iniciamos um parceira de sucesso junto a empresa  Lucro Máximo, no qual o Adilson nos orientou e vem nos dando total apoio não só para desenvolver o sistema, desde os cuidados  com rebanho e plantio, como todo o sistema geral da fazenda. Começamos com 100 litros dia até chegarmos a 1400 litros dia. Só tenho a agradecer a parceria da empresa Lucro Máximo e da pessoa maravilhosa que é Sr Adilson; total companheirismo e dedicação para que possamos alcançar nosso objetivo. Todas as tomadas de decisões ele sempre presente e nos orientando da melhor forma possível. Muito obrigado Lucro Máximo e ao Sr Adilson Ferreira',
+          text: 'Há 3 anos iniciamos um trabalho voltado na produção de leite, no qual iniciamos um parceira de sucesso junto a empresa  Lucro Máximo, no qual o Adilson nos orientou e vem nos dando total apoio não só para desenvolver o sistema, desde os cuidados  com rebanho e plantio, como todo o sistema geral da fazenda.<br/> Começamos com 100 litros dia até chegarmos a 1400 litros dia. <br/>Só tenho a agradecer a parceria da empresa Lucro Máximo e da pessoa maravilhosa que é Sr Adilson; total companheirismo e dedicação para que possamos alcançar nosso objetivo.<br/> Todas as tomadas de decisões ele sempre presente e nos orientando da melhor forma possível.<br/> Muito obrigado Lucro Máximo e ao Sr Adilson Ferreira',
           img: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
           name: 'Carlos Joel',
           position: 'Sócio na fazenda Santa Edwiges, em Santos Dumont - MG'
         },
         {
-          text: 'MACBETH - Conhecer o que fiz... Melhor me fora se não me conhecesse.\n<br>' +
-            '(<i>Pancadas dentro.</i>)\n<br>' +
-            'Acordam Duncan batendo desse modo. Ah! se acordasses!\n<br>' +
-            '(<i>Saem.</i>)',
+          text: 'lorem',
           img: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
           name: 'James',
           position: ''

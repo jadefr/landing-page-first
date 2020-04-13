@@ -1,7 +1,7 @@
 <template>
   <div class="testimonial-container">
     <!-- Card -->
-    <v-card
+    <div id="testimonial-card"
       class="mx-auto"
     >
 <!--      <v-card-text class="title font-weight-light">{{ text }}</v-card-text>-->
@@ -14,7 +14,7 @@
         >
       </v-avatar>
       <v-card-text>{{ name }}</v-card-text>
-    </v-card>
+    </div>
   </div>
 </template>
 
@@ -31,9 +31,9 @@ export default {
 
 <style lang="scss" scoped>
 .testimonial-container {
-  .v-card {
-    padding-right: 20%;
-    padding-left: 20%;
+  #testimonial-card {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 </style>
