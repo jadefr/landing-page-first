@@ -58,15 +58,10 @@ export default {
     }
   },
   created () {
-    console.log(this.$props.title)
     if (this.$props.title === 'Curso Online') {
       this.isCursoOnline = true
     }
-    console.log(this.isCursoOnline)
   }
-  // data: () => ({
-  //   isActive: false
-  // })
 }
 </script>
 

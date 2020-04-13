@@ -15,6 +15,9 @@
           <v-col class="text-center" cols="12" id="parallax-text">
             <h1 class="display-4 font-weight-medium mb-4">Projeto Lucro Máximo</h1>
             <h4 class="display-1 font-regular mt-4">Consultoria agropecuária</h4>
+            <v-btn class="mt-5" outlined color="white" dark large>
+              Conheça
+            </v-btn>
           </v-col>
         </v-row>
       </v-parallax>
@@ -77,18 +80,19 @@
           <h1 class="display-1 font-weight-light mb-9">Depoimentos</h1>
 
           <!-- Carousel -->
-          <v-carousel
-            light
-            cycle
-            hide-delimiter-background
-            show-arrows-on-hover
-          >
+<!--          <v-carousel-->
+<!--            light-->
+<!--            cycle-->
+<!--            hide-delimiter-background-->
+<!--            show-arrows-on-hover-->
+<!--          >-->
+          <v-carousel cycle hide-delimiters>
             <v-carousel-item
               v-for="(obj, key) in testimonials" :key="key"
             >
               <Testimonial
                 :text="obj.text"
-                :img="obj.img"
+                :img="imgTestimonial(obj.img)"
                 :name="obj.name"
               />
             </v-carousel-item>
@@ -147,34 +151,21 @@ export default {
       testimonials: [
         {
           text: 'Tive uma grande honra de poder estagiar com o Adilson; o principal aprendizado foi o amor e a determinação que ele tem pela profissão e pelo seu trabalho. <br/>Realmente é uma pessoa que respira a zootecnia.<br/> Ao longo desses anos sempre me inspirei muito nele.',
-          img: 'https://cdn.vuetifyjs.com/images/john.jpg',
+          img: 'rodrigo-lima-granato',
           name: 'Rodrigo Lima Granato',
           position: 'Consultor técnico de bovinos de corte da Agroceres, em Barra do Garças - MT'
         },
         {
           text: 'Após um período da aplicação de seus sábios ensinamento na Fazenda Sucupira, hoje estamos colhendo frutos representados pelas arrobas de boi excessivas, em vista principalmente do resultado do capim que ao receber o devido tratamento traduziu-se no  hoje festejado resultado positivo da atividade. <br/> Sua assistência marcou um novo e promissor destino em nossas propriedades.',
-          img: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+          img: 'jose-manuel-tiago',
           name: 'José Manoel Tiago Bittencourt',
           position: 'Advogado e pecuarista'
         },
         {
           text: 'Há 3 anos iniciamos um trabalho voltado na produção de leite, no qual iniciamos um parceira de sucesso junto a empresa  Lucro Máximo, no qual o Adilson nos orientou e vem nos dando total apoio não só para desenvolver o sistema, desde os cuidados  com rebanho e plantio, como todo o sistema geral da fazenda.<br/> Começamos com 100 litros dia até chegarmos a 1400 litros dia. <br/>Só tenho a agradecer a parceria da empresa Lucro Máximo e da pessoa maravilhosa que é Sr Adilson; total companheirismo e dedicação para que possamos alcançar nosso objetivo.<br/> Todas as tomadas de decisões ele sempre presente e nos orientando da melhor forma possível.<br/> Muito obrigado Lucro Máximo e ao Sr Adilson Ferreira',
-          img: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+          img: 'carlos-joel',
           name: 'Carlos Joel',
           position: 'Sócio na fazenda Santa Edwiges, em Santos Dumont - MG'
-        },
-        {
-          text: 'lorem',
-          img: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-          name: 'James',
-          position: ''
-        },
-        {
-          text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, reprehenderit, vero!' +
-              ' Corporis ipsam laborum modi omnis pariatur possimus ut voluptatem. ',
-          img: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-          name: 'Peter',
-          position: ''
         }
       ]
     }
@@ -204,6 +195,16 @@ export default {
         color = '#004d40'
       }
       return color
+    },
+    imgTestimonial (obj) {
+      let imgTestimonial = ''
+      for (let i = 0; i < this.imgs.length; i++) {
+        imgTestimonial = this.imgs[i]
+        if (imgTestimonial.toString().includes(obj)) {
+          console.log(imgTestimonial.toString())
+          return imgTestimonial
+        }
+      }
     }
   }
 }
@@ -226,6 +227,13 @@ export default {
 
           h1 {
             filter: initial;
+          }
+          .v-btn {
+            background-color: #004D4C;
+            opacity: 0.7;
+            &:hover {
+              opacity: 1;
+            }
           }
         }
       }

@@ -2,18 +2,18 @@
   <div class="testimonial-container">
     <!-- Card -->
     <div id="testimonial-card"
-      class="mx-auto"
+      class="ma-auto"
     >
-<!--      <v-card-text class="title font-weight-light">{{ text }}</v-card-text>-->
       <v-card-text class="title font-weight-light" v-html="text"></v-card-text>
       <v-avatar
+        class="mt-5"
         size="120"
       >
         <img
           :src="img"
         >
       </v-avatar>
-      <v-card-text>{{ name }}</v-card-text>
+      <v-card-text class="mb-5">{{ name }}</v-card-text>
     </div>
   </div>
 </template>
