@@ -1,30 +1,39 @@
 <template>
   <div class="service-card-container">
     <!-- Card -->
-    <v-row class="text-center white--text"
-           :style="{'background-color':background}"
+    <div class="white--text"
+         :style="{'background-color':background}"
     >
-      <v-col cols="12" class="col-sm-12 col-md-10">
-        <div class="card-container ma-1">
-          <div class="card-heading mx-1">
-            <h2>{{ title }}</h2>
+      <!-- Title -->
+      <v-row
+        align="center"
+        justify="center"
+        class="pt-6 pb-4"
+      >
+        <span class="display-1 font-weight-light">{{ title }}</span>
+        <hr>
+      </v-row>
+
+      <div class="service-content">
+        <v-row
+          align="center"
+          justify="center"
+        >
+          <!-- Image -->
+          <div class="card-img col-sm-12 col-md-7 px-md-10 py-md-10" id="service-img">
+            <v-img
+              :src="img"
+              id="service-v-img"
+            ></v-img>
           </div>
-          <div class="service-content">
-            <!-- Image -->
-            <div class="card-img my-3 mx-3" id="service-img">
-              <v-img
-                max-height="240"
-                :src="img"
-              ></v-img>
-            </div>
-            <!-- Text -->
-            <div class="card-text mx-8" id="service-text">
-              <p>{{ text }}</p>
-            </div>
+          <!-- Text -->
+          <div class="card-text col-sm-12 col-md-5" id="service-text">
+            <p class="headline font-weight-regular">{{ text }}</p>
           </div>
-        </div>
-      </v-col>
-    </v-row>
+        </v-row>
+      </div>
+    </div>
+    <hr>
   </div>
 </template>
 
@@ -47,23 +56,42 @@ export default {
   @import "../assets/sass/libraries/mixins";
 
   .service-card-container {
-    .service-content{
+    hr {
+      color: white;
+    }
+
+    .service-content {
       .v-image {
         border-radius: 7px;
       }
-      @include md {
-        display: grid;
-        grid-template-columns: 600px 2fr;
-        grid-template-areas: "service-img service-text";
-        padding-top: 10px;
 
-        #service-img {
-          max-height: initial;
-          min-height: 400px;
+      @include md {
+        #service-v-img {
+          max-height: 400px;
+          margin-left: 20%;
         }
 
         #service-text {
-          padding-top: 10%;
+          p {
+            margin-left: 20%;
+            padding-right: 20%;
+          }
+        }
+      }
+    }
+
+    #test-container{
+      @include md {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "service-v-img-test service-text-test" ;
+
+        #service-v-img-test {
+          /*width: 40%;*/
+          max-width: 500px;
+          max-height: 400px;
+          padding: 5% 0;
+          margin-left: 15%;
         }
       }
     }
