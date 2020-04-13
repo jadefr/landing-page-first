@@ -20,7 +20,7 @@
           justify="center"
         >
           <!-- Image -->
-          <div class="card-img col-sm-12 col-md-7 px-md-10 py-md-10" id="service-img">
+          <div class="card-img col-sm-12 col-md-7 pa-md-10" id="service-img">
             <v-img
               :src="img"
               id="service-v-img"
@@ -59,10 +59,25 @@ export default {
     hr {
       color: white;
     }
+    .v-image {
+      border-radius: 7px;
+    }
 
     .service-content {
-      .v-image {
-        border-radius: 7px;
+
+      @include sm {
+        #service-img {
+          padding-left: 10%;
+          padding-right: 10%;
+
+          #service-v-img {
+            max-height: 240px;
+          }
+        }
+        #service-text {
+          padding-right: 10%;
+          padding-left: 10%;
+        }
       }
 
       @include md {
@@ -76,22 +91,6 @@ export default {
             margin-left: 20%;
             padding-right: 20%;
           }
-        }
-      }
-    }
-
-    #test-container{
-      @include md {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "service-v-img-test service-text-test" ;
-
-        #service-v-img-test {
-          /*width: 40%;*/
-          max-width: 500px;
-          max-height: 400px;
-          padding: 5% 0;
-          margin-left: 15%;
         }
       }
     }
