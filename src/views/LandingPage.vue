@@ -1,6 +1,7 @@
 <template>
   <div class="landing-page-view-container">
 
+    <!-- Header -->
     <div class="header h-100">
       <!-- Parallax -->
       <v-parallax
@@ -21,27 +22,34 @@
 
     <!-- Sobre Nós -->
     <section id="sobre-nos">
-      <v-row class="text-center my-4 mx-3">
-        <!-- Text -->
-        <v-col>
-          <h1 class="mb-3">Sobre Nós</h1>
+      <v-row justify="center" class="text-center my-4 mx-3">
+        <v-col class="col-sm-12 col-md-10">
+          <!-- Title -->
+          <h1 class="display-1 font-weight-light mb-9">Sobre Nós</h1>
           <div class="sobre-nos-content">
-            <p class="sobre-nos-paragraph" id="first-paragraph">
+            <!-- Text -->
+            <p class="sobre-nos-paragraph title font-weight-light" id="first-paragraph">
               O Projeto Lucro Máximo surgiu em 2010, com o intuito de difundir a tecnologia no campo, levando mais
               conhecimento e tecnologia ao produtor.
-            </p>
-            <!-- Image -->
-            <v-img
-              class="my-3"
-              id="sobre-nos-img"
-              src="../assets/img/sobreNos.jpeg"
-            ></v-img>
-            <p class="sobre-nos-paragraph" id="second-paragraph">
               O projeto é dirigido por Adilson Esquerdo Ferreira, zootecnista, formado pela Universidade Federal Rural do
               Rio de Janeiro em 2007,
               além de contar com o auxílio de outros profissionais da área agrícola (Médico Veterinário, Agrônomo, Técnico
               Agrícola e Administrador de empresas).
             </p>
+            <!-- Image -->
+            <v-row
+              align="center"
+              justify="center"
+            >
+              <v-col class="col-sm-12 col-md-8">
+                <v-img
+                  justify="center"
+                  class="my-3"
+                  id="sobre-nos-img"
+                  src="../assets/img/sobreNos.jpeg"
+                ></v-img>
+              </v-col>
+            </v-row>
           </div>
         </v-col>
       </v-row>
@@ -212,12 +220,25 @@ export default {
       .v-image {
         border-radius: 7px;
       }
+    }
+
+    #sobre-nos-test {
+      .v-image {
+        border-radius: 7px;
+      }
 
       .sobre-nos-content {
         @include md {
           display: grid;
+          grid-template-row: 1fr;
           grid-template-columns: 1fr 1fr;
-          grid-template-areas: "sobre-nos-img sobre-nos-paragraph";
+          grid-template-areas: "sobre-nos-img-test first-paragraph-test second-paragraph-test";
+        }
+        @include sm {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-row: 1fr 1fr 1fr;
+          grid-template-areas: "first-paragraph-test" "sobre-nos-img-test" "second-paragraph-test";
         }
       }
     }

@@ -4,7 +4,7 @@
     <v-row class="text-center white--text"
            :style="{'background-color':background}"
     >
-      <v-col cols="12">
+      <v-col cols="12" class="col-sm-12 col-md-10">
         <div class="card-container ma-1">
           <div class="card-heading mx-1">
             <h2>{{ title }}</h2>
@@ -56,6 +56,11 @@ export default {
         grid-template-columns: 600px 2fr;
         grid-template-areas: "service-img service-text";
         padding-top: 10px;
+
+        #service-img {
+          max-height: initial;
+          min-height: 400px;
+        }
 
         #service-text {
           padding-top: 10%;
