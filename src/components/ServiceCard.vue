@@ -10,7 +10,7 @@
         justify="center"
         class="pt-6 pb-4"
       >
-        <span class="display-1 font-weight-light">{{ title }}</span>
+        <span class="display-1 font-weight-light" id="title">{{ title }}</span>
         <hr>
       </v-row>
 
@@ -20,15 +20,16 @@
           justify="center"
         >
           <!-- Image -->
-          <div class="card-img col-sm-12 col-md-7 pa-md-10" id="service-img">
+          <div class="card-img col-sm-12 col-md-6 py-md-10" id="service-img">
             <v-img
+              :aspect-ratio="16/9"
               :src="img"
               id="service-v-img"
             ></v-img>
           </div>
           <!-- Text -->
-          <div class="card-text col-sm-12 col-md-5" id="service-text">
-            <p class="headline font-weight-regular">{{ text }}</p>
+          <div class="card-text col-sm-12 col-md-6" id="service-text">
+            <p class="headline font-weight-light">{{ text }}</p>
           </div>
         </v-row>
       </div>
@@ -54,16 +55,17 @@ export default {
 
 <style lang="scss" scoped>
   @import "../assets/sass/libraries/mixins";
-
   .service-card-container {
     hr {
       color: white;
     }
+
     .v-image {
       border-radius: 7px;
     }
 
     .service-content {
+      text-align: center;
 
       @include sm {
         #service-img {
@@ -82,7 +84,6 @@ export default {
 
       @include md {
         #service-v-img {
-          max-height: 400px;
           margin-left: 20%;
         }
 
