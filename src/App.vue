@@ -8,11 +8,15 @@
       color="teal darken-4"
       id="navbar"
     >
+      <!-- Icon -->
       <v-app-bar-nav-icon
         id="nav-icon"
         class="d-sm-none"
       ></v-app-bar-nav-icon>
+
       <v-spacer></v-spacer>
+
+      <!-- Nav items -->
       <AppBarBtn
         v-for="(obj, key) in items" :key="key"
         :item-u-r-l="obj.itemURL"
@@ -59,20 +63,6 @@ export default {
           itemText: 'Contato'
         }
       ]
-    }
-  },
-  /* eslint-env jquery */
-  methods: {
-    myFunction () {
-      var x = document.getElementById('nav-icon')
-      if (x.className === 'nav-icon') {
-        x.className += ' responsive'
-      } else {
-        x.className = 'nav-icon'
-      }
-    },
-    appBarItem (obj) {
-
     }
   }
 }
