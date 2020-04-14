@@ -18,15 +18,15 @@
             justify="center"
             tile
           >
-            <v-card-title>
+            <v-card-title class="headline font-weight-regular">
               Mapa do Site
             </v-card-title>
           </v-row>
           <v-row
-            justify="center"
+            justify="left"
             tile
           >
-            <v-card-text>
+            <v-card-text class="subtitle-1 font-weight-light">
               <p>Sobre nós</p>
               <p>Serviços</p>
               <p>Depoimentos</p>
@@ -40,14 +40,14 @@
           <v-row
             justify="center"
           >
-            <v-card-title>
+            <v-card-title class="headline font-weight-regular">
               Contato
             </v-card-title>
           </v-row>
           <v-row
             justify="center"
           >
-            <v-card-text>
+            <v-card-text class="subtitle-1 font-weight-light">
               <p>projetolucromaximo@gmail.com</p>
               <p>(32)998009178</p>
               <p>CNPJ: 11.808.611/0001-87</p>

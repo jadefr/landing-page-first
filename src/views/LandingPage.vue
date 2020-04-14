@@ -74,13 +74,19 @@
 
     <!-- Depoimentos -->
     <section id="depoimentos">
-      <v-row class="text-center my-4 mx-10">
-        <v-col>
+      <v-row class="text-center my-4 mx-10" id="depoimentos-row">
+        <v-col
+          id="depoimentos-col"
+        >
           <!-- Title -->
           <h1 class="display-1 font-weight-light mb-9">Depoimentos</h1>
 
           <!-- Carousel -->
-          <v-carousel cycle hide-delimiters>
+          <v-carousel
+            height="1000px"
+            cycle
+            hide-delimiters
+          >
             <v-carousel-item
               v-for="(obj, key) in testimonials" :key="key"
             >
@@ -234,12 +240,6 @@ export default {
       }
     }
 
-    #sobre-nos-test {
-      .v-image {
-        border-radius: 7px;
-      }
-    }
-
     #servicos {
       background-color: white;
 
@@ -247,6 +247,21 @@ export default {
 
         .card-heading {
           text-align: center;
+        }
+      }
+    }
+
+    #depoimentos {
+
+      #depoimentos-row {
+        background-color: #008978;
+
+        #depoimentos-col {
+          background-color: brown;
+
+          .v-carousel {
+            background-color: black;
+          }
         }
       }
     }
