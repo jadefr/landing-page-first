@@ -81,11 +81,9 @@
           <!-- Title -->
           <h1 class="display-1 font-weight-light mb-9">Depoimentos</h1>
 
-<!--          :height="[$vuetify.breakpoint.mdAndUp ? '600' : '1000']"-->
-
           <!-- Carousel -->
           <v-carousel
-            :height="height"
+            :height="[$vuetify.breakpoint.mdAndUp ? '600' : 'this.$props.height']"
             cycle
             hide-delimiters
           >
@@ -174,7 +172,8 @@ export default {
           position: 'Sócio na fazenda Santa Edwiges, em Santos Dumont - MG'
         }
       ],
-      height: ''
+      height: '',
+      breakpoint: ''
     }
   },
   computed: {
@@ -201,12 +200,14 @@ export default {
           if (img.toString().includes('carlos-joel')) {
             this.height = 1000
           }
-          console.log(this.height)
           return img
         }
       }
     }
   }
+  // created () {
+  //   this.height = ''
+  // }
 }
 </script>
 

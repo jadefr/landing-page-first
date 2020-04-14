@@ -57,11 +57,20 @@
 
         <!-- Footer Logo -->
         <div id="footer-logo">
-          <v-img
-            class="my-3"
-            id="footer-logo-img"
-            src="../assets/img/logo.png"
-          ></v-img>
+          <v-lazy
+            v-model="isActive"
+            :options="{
+          threshold: .5
+        }"
+            min-height="240"
+            transition="fade-transition"
+          >
+            <v-img
+              class="my-3"
+              id="footer-logo-img"
+              src="../assets/img/logo.png"
+            ></v-img>
+          </v-lazy>
         </div>
       </v-col>
       </div>
@@ -104,7 +113,8 @@ export default {
       'fab fa-instagram',
       'fab fa-linkedin',
       'fab fa-youtube'
-    ]
+    ],
+    isActive: false
   })
 }
 </script>
