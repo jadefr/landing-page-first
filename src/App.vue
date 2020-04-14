@@ -5,47 +5,49 @@
       app
       dense
       dark
-      elevate-on-scroll
-      scroll-target="#scrolling-techniques-7"
       color="teal darken-4"
       id="navbar"
     >
-<!--      <v-app-bar-nav-icon></v-app-bar-nav-icon>-->
-
-<!--      <v-toolbar-title>Title</v-toolbar-title>-->
-
+      <v-app-bar-nav-icon
+        id="nav-icon"
+        class="d-sm-none"
+      ></v-app-bar-nav-icon>
       <v-spacer></v-spacer>
       <v-btn
         ref="button"
         target="_blank"
         text
+        class="mr-2 d-none d-sm-flex"
         @click="$vuetify.goTo('#sobre-nos', linear, 900, -6)"
       >
-        <span class="mr-2">Sobre Nós</span>
+        <span>Sobre Nós</span>
       </v-btn>
       <v-btn
         ref="button"
         target="_blank"
         text
+        class="mr-2 d-none d-sm-flex"
         @click="$vuetify.goTo('#servicos', linear, 900, -6)"
       >
-        <span class="mr-2">Serviços</span>
+        <span>Serviços</span>
       </v-btn>
       <v-btn
         ref="button"
         target="_blank"
         text
+        class="mr-2 d-none d-sm-flex"
         @click="$vuetify.goTo('#depoimentos', linear, 900, -6)"
       >
-        <span class="mr-2">Depoimentos</span>
+        <span>Depoimentos</span>
       </v-btn>
       <v-btn
         ref="button"
         target="_blank"
         text
+        class="mr-2 d-none d-sm-flex"
         @click="$vuetify.goTo('#contato', linear, 900, -6)"
       >
-        <span class="mr-2">Contato</span>
+        <span>Contato</span>
       </v-btn>
     </v-app-bar>
     <v-content>
@@ -65,6 +67,17 @@ export default {
   components: {
     Footer,
     LandingPage
+  },
+  /* eslint-env jquery */
+  methods: {
+    myFunction () {
+      var x = document.getElementById('nav-icon')
+      if (x.className === 'nav-icon') {
+        x.className += ' responsive'
+      } else {
+        x.className = 'nav-icon'
+      }
+    }
   }
 }
 </script>
