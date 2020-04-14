@@ -81,9 +81,11 @@
           <!-- Title -->
           <h1 class="display-1 font-weight-light mb-9">Depoimentos</h1>
 
+<!--          :height="[$vuetify.breakpoint.mdAndUp ? '600' : '1000']"-->
+
           <!-- Carousel -->
           <v-carousel
-            height="1000px"
+            :height="height"
             cycle
             hide-delimiters
           >
@@ -171,15 +173,14 @@ export default {
           name: 'Carlos Joel',
           position: 'Sócio na fazenda Santa Edwiges, em Santos Dumont - MG'
         }
-      ]
+      ],
+      height: ''
     }
   },
   computed: {
     ...mapState([
       'imgs'
     ])
-  },
-  mounted () {
   },
   methods: {
     color (obj) {
@@ -192,12 +193,16 @@ export default {
       return color
     },
     img (obj) {
-      let imgTestimonial = ''
+      let img = ''
+      this.height = ''
       for (let i = 0; i < this.imgs.length; i++) {
-        imgTestimonial = this.imgs[i]
-        if (imgTestimonial.toString().includes(obj)) {
-          console.log(imgTestimonial.toString())
-          return imgTestimonial
+        img = this.imgs[i]
+        if (img.toString().includes(obj)) {
+          if (img.toString().includes('carlos-joel')) {
+            this.height = 1000
+          }
+          console.log(this.height)
+          return img
         }
       }
     }
@@ -223,9 +228,11 @@ export default {
           h1 {
             filter: initial;
           }
+
           .v-btn {
             background-color: #004D4C;
             opacity: 0.7;
+
             &:hover {
               opacity: 1;
             }
@@ -252,17 +259,7 @@ export default {
     }
 
     #depoimentos {
-
-      #depoimentos-row {
-        background-color: #008978;
-
-        #depoimentos-col {
-          background-color: brown;
-
-          .v-carousel {
-            background-color: black;
-          }
-        }
+      .v-carousel {
       }
     }
   }
