@@ -9,10 +9,23 @@
       id="navbar"
     >
       <!-- Icon -->
-      <v-app-bar-nav-icon
-        id="nav-icon"
-        class="d-sm-none"
-      ></v-app-bar-nav-icon>
+      <v-menu offset-y>
+        <template v-slot:activator="{ on }">
+          <v-app-bar-nav-icon
+            id="nav-icon"
+            class="d-sm-none"
+            v-on="on"
+          ></v-app-bar-nav-icon>
+        </template>
+        <v-list>
+          <v-list-item
+            v-for="(obj, key) in items" :key="key"
+            @click="$vuetify.goTo(obj.itemURL, linear, 900, -6)"
+          >
+            <v-list-item-title>{{ obj.itemText }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
 
       <v-spacer></v-spacer>
 
