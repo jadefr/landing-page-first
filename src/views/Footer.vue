@@ -65,11 +65,13 @@
             min-height="240"
             transition="fade-transition"
           >
-            <v-img
-              class="my-3"
-              id="footer-logo-img"
-              src="../assets/img/logo.png"
-            ></v-img>
+            <a href="#">
+              <v-img
+                class="my-3"
+                id="footer-logo-img"
+                src="../assets/img/logo.png"
+              ></v-img>
+            </a>
           </v-lazy>
         </div>
       </v-col>
