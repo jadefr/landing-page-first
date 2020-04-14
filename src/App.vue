@@ -16,32 +16,36 @@
 
       <v-spacer></v-spacer>
       <v-btn
-        href=""
+        ref="button"
         target="_blank"
         text
+        @click="$vuetify.goTo('#sobre-nos', linear, 900, -6)"
       >
         <span class="mr-2">Sobre Nós</span>
       </v-btn>
       <v-btn
-        href=""
+        ref="button"
         target="_blank"
         text
+        @click="$vuetify.goTo('#servicos', linear, 900, -6)"
       >
         <span class="mr-2">Serviços</span>
       </v-btn>
       <v-btn
-        href=""
+        ref="button"
         target="_blank"
         text
-      >
-        <span class="mr-2">Contato</span>
-      </v-btn>
-      <v-btn
-        href=""
-        target="_blank"
-        text
+        @click="$vuetify.goTo('#depoimentos', linear, 900, -6)"
       >
         <span class="mr-2">Depoimentos</span>
+      </v-btn>
+      <v-btn
+        ref="button"
+        target="_blank"
+        text
+        @click="$vuetify.goTo('#contato', linear, 900, -6)"
+      >
+        <span class="mr-2">Contato</span>
       </v-btn>
     </v-app-bar>
     <v-content>

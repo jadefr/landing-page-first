@@ -15,7 +15,14 @@
           <v-col class="text-center" cols="12" id="parallax-text">
             <h1 class="display-4 font-weight-medium mb-4">Projeto Lucro Máximo</h1>
             <h4 class="display-1 font-regular mt-4">Consultoria agropecuária</h4>
-            <v-btn class="mt-5" outlined color="white" dark large>
+            <v-btn
+              class="mt-5"
+              outlined
+              color="white"
+              dark
+              large
+              @click="$vuetify.goTo('#sobre-nos', linear, 900, -6)"
+            >
               Conheça
             </v-btn>
           </v-col>
@@ -206,9 +213,6 @@ export default {
       }
     }
   }
-  // created () {
-  //   this.height = ''
-  // }
 }
 </script>
 

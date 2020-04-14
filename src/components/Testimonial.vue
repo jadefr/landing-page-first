@@ -18,10 +18,7 @@
           :src="img"
         >
       </v-avatar>
-<!--      <v-card-text>{{ name }}</v-card-text>-->
       <v-card-text v-html="name + position"></v-card-text>
-<!--      <v-card-text v-html="position"></v-card-text>-->
-<!--      <v-card-text class="mb-5">{{ position }}</v-card-text>-->
     </div>
   </div>
 </template>
