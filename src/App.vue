@@ -36,6 +36,13 @@
       >
         <span class="mr-2">Contato</span>
       </v-btn>
+      <v-btn
+        href=""
+        target="_blank"
+        text
+      >
+        <span class="mr-2">Depoimentos</span>
+      </v-btn>
     </v-app-bar>
     <v-content>
       <LandingPage/>

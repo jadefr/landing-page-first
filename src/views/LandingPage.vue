@@ -67,7 +67,7 @@
         v-for="(obj, key) in services" :key="key"
         :background="color(obj.color)"
         :title="obj.title"
-        :img="img(key)"
+        :img="img(obj.img)"
         :text="obj.text"
       />
     </section>
@@ -80,19 +80,13 @@
           <h1 class="display-1 font-weight-light mb-9">Depoimentos</h1>
 
           <!-- Carousel -->
-<!--          <v-carousel-->
-<!--            light-->
-<!--            cycle-->
-<!--            hide-delimiter-background-->
-<!--            show-arrows-on-hover-->
-<!--          >-->
           <v-carousel cycle hide-delimiters>
             <v-carousel-item
               v-for="(obj, key) in testimonials" :key="key"
             >
               <Testimonial
                 :text="obj.text"
-                :img="imgTestimonial(obj.img)"
+                :img="img(obj.img)"
                 :name="obj.name"
               />
             </v-carousel-item>
@@ -128,24 +122,28 @@ export default {
         {
           title: 'Assistência Técnica Mensal',
           text: 'Consultorias semanais ou quinzenais na área da pecuária de leite e/ou pecuária de corte',
-          color: 'maroon'
+          color: 'maroon',
+          img: 'img1'
         },
         {
           title: 'Projeto de Pastejo',
           text: 'Utilização de dejetos do curral nas pastagens via motobomba ou gravidade, \n' +
               'visando o aumento da fertilidade do solo e da produtividade da forrageira escolhida',
-          color: 'green'
+          color: 'green',
+          img: 'img2'
         },
         {
           title: 'Projeto de Crédito Rural',
           text: 'Projetos para o produtor na Caixa Econômica Federal, Banco do Brasil ou Sicoob',
-          color: 'maroon'
+          color: 'maroon',
+          img: 'img3'
         },
         {
           title: 'Curso Online',
           text: 'Oferecemos conhecimento técnico aos produtores e trabalhadores rurais e capacitação dos técnicos ligados ao meio rural,  \n' +
               'com o intuito de levar mais tecnologia e conhecimento ao campo.\n',
-          color: 'green'
+          color: 'green',
+          img: 'img4'
         }
       ],
       testimonials: [
@@ -178,15 +176,6 @@ export default {
   mounted () {
   },
   methods: {
-    img (key) {
-      let img = ''
-      for (let i = 0; i < this.imgs.length; i++) {
-        img = this.imgs[i]
-        if (key === i) {
-          return img
-        }
-      }
-    },
     color (obj) {
       let color = ''
       if (obj.includes('maroon')) {
@@ -196,7 +185,7 @@ export default {
       }
       return color
     },
-    imgTestimonial (obj) {
+    img (obj) {
       let imgTestimonial = ''
       for (let i = 0; i < this.imgs.length; i++) {
         imgTestimonial = this.imgs[i]
