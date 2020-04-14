@@ -18,7 +18,10 @@
           :src="img"
         >
       </v-avatar>
-      <v-card-text class="mb-5">{{ name }}</v-card-text>
+<!--      <v-card-text>{{ name }}</v-card-text>-->
+      <v-card-text v-html="name + position"></v-card-text>
+<!--      <v-card-text v-html="position"></v-card-text>-->
+<!--      <v-card-text class="mb-5">{{ position }}</v-card-text>-->
     </div>
   </div>
 </template>
@@ -29,7 +32,8 @@ export default {
   props: {
     text: String,
     img: String,
-    name: String
+    name: String,
+    position: String
   }
 }
 </script>
