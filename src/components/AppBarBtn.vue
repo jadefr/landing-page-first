@@ -5,7 +5,7 @@
     target="_blank"
     text
     class="mr-2 d-none d-sm-flex"
-    @click="$vuetify.goTo('this.$props.whereTo', linear, 900, -6)"
+    @click="$vuetify.goTo('this.$props.itemURL', linear, 900, -6)"
   >
     <span>{{ itemText }}</span>
   </v-btn>
@@ -16,7 +16,7 @@
 export default {
   name: 'AppBarBtn',
   props: {
-    itemURI: String,
+    itemURL: String,
     itemText: String
   }
 }
