@@ -54,12 +54,22 @@
               justify="center"
             >
               <v-col class="col-sm-12 col-md-8">
-                <v-img
-                  justify="center"
-                  class="my-3"
-                  id="sobre-nos-img"
-                  src="../assets/img/sobreNos.jpeg"
-                ></v-img>
+                <v-carousel :show-arrows="false"
+                            cycle
+                            hide-delimiters
+                >
+                  <v-carousel-item
+                    v-for="(obj, key) in carousel" :key="key"
+                    :src="img(obj)"
+                  >
+                  </v-carousel-item>
+                </v-carousel>
+                <!--                <v-img-->
+                <!--                  justify="center"-->
+                <!--                  class="my-3"-->
+                <!--                  id="sobre-nos-img"-->
+                <!--                  src="../assets/img/carousel5.jpeg"-->
+                <!--                ></v-img>-->
               </v-col>
             </v-row>
           </div>
@@ -180,6 +190,9 @@ export default {
           position: '<br>Sócio na fazenda Santa Edwiges, em Santos Dumont - MG'
         }
       ],
+      carousel: [
+        'carousel1', 'carousel2', 'carousel3', 'carousel4', 'carousel5', 'carousel6'
+      ],
       height: '',
       breakpoint: ''
     }
@@ -220,6 +233,10 @@ export default {
   @import "../assets/sass/libraries/mixins";
 
   .landing-page-view-container {
+
+    .v-window {
+      border-radius: 7px;
+    }
 
     .header {
 

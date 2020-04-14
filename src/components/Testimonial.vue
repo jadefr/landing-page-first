@@ -4,7 +4,6 @@
     <div id="testimonial-card"
          class="ma-auto"
     >
-<!--      <v-card-text class="title font-weight-light" v-html="text"></v-card-text>-->
       <v-card-text
         :class="[$vuetify.breakpoint.mdAndUp ? 'title font-weight-light' : 'subtitle-1 font-weight-light']"
         v-html="text"
