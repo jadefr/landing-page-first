@@ -8,62 +8,62 @@
     >
 
       <div id="footer-container">
-        <!-- Footer info -->
-        <div id="footer-info">
-          <!-- Text -->
-          <div class="footer-text">
-
-            <!-- Mapa do Site -->
-            <div id="mapa-do-site">
-              <v-row
-                justify="center"
-                tile
-              >
-                <v-card-title>
-                  Mapa do Site
-                </v-card-title>
-              </v-row>
-              <v-row
-                justify="center"
-                tile
-              >
-                <v-card-text>
-                  <p>Sobre nós</p>
-                  <p>Serviços</p>
-                  <p>Depoimentos</p>
-                </v-card-text>
-              </v-row>
-            </div>
-
-            <!-- Contato -->
-            <div id="contato">
-              <v-row
-                justify="center"
-              >
-                <v-card-title>
-                  Contato
-                </v-card-title>
-              </v-row>
-              <v-row
-                justify="center"
-              >
-                <v-card-text>
-                  <p>Lorem ipsum dolor sit amet.</p>
-                  <p>Lorem ipsum dolor.</p>
-                  <p>Lorem ipsum dolor sit.</p>
-                </v-card-text>
-              </v-row>
-            </div>
-          </div>
+        <v-col
+          align="center"
+          class="pt-6 pb-4"
+        >
+        <!-- Mapa do Site -->
+        <div id="mapa-do-site">
+          <v-row
+            justify="center"
+            tile
+          >
+            <v-card-title>
+              Mapa do Site
+            </v-card-title>
+          </v-row>
+          <v-row
+            justify="center"
+            tile
+          >
+            <v-card-text>
+              <p>Sobre nós</p>
+              <p>Serviços</p>
+              <p>Depoimentos</p>
+              <p>Política de Privacidade</p>
+            </v-card-text>
+          </v-row>
         </div>
+
+        <!-- Contato -->
+        <div id="contato">
+          <v-row
+            justify="center"
+          >
+            <v-card-title>
+              Contato
+            </v-card-title>
+          </v-row>
+          <v-row
+            justify="center"
+          >
+            <v-card-text>
+              <p>projetolucromaximo@gmail.com</p>
+              <p>(32)998009178</p>
+              <p>CNPJ: 11.808.611/0001-87</p>
+            </v-card-text>
+          </v-row>
+        </div>
+
         <!-- Footer Logo -->
         <div id="footer-logo">
-            <v-img
-              class="my-3"
-              id="footer-logo-img"
-              src="../assets/img/logo.png"
-            ></v-img>
-          </div>
+          <v-img
+            class="my-3"
+            id="footer-logo-img"
+            src="../assets/img/logo.png"
+          ></v-img>
+        </div>
+      </v-col>
       </div>
 
       <!-- Icons -->
@@ -111,28 +111,20 @@ export default {
 
 <style lang="scss" scoped>
   .footer-view-container {
-
     #footer-container {
-      display: grid;
-      grid-template-columns: 3fr 1fr;
-      grid-template-areas: "footer-info footer-logo";
-
-      #footer-logo {
-        position: relative;
-        top: 25%;
-        right: 0;
-        #footer-logo-img {
-          width: 50%;
-        }
+      #footer-logo-img {
+        height: 240px;
+        width: 240px;
       }
     }
-
-    #credits{
+    #credits {
       p {
         color: #715f58;
+
         a {
           text-decoration: none;
           color: inherit;
+
           &:hover {
             color: #3a4b40;
           }
