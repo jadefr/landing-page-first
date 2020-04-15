@@ -22,6 +22,7 @@
           <FooterInfo
             :title="contato"
             :items="contatoArray"
+            id="contato"
           />
 
         <!-- Footer Logo -->
@@ -90,15 +91,36 @@ export default {
       'fab fa-youtube'
     ],
     mapaDoSiteArray: [
-      'Sobre nós',
-      'Serviços',
-      'Depoimentos',
-      'Política de Privacidade'
+      {
+        text: 'Sobre nós',
+        link: '#sobre-nos'
+      },
+      {
+        text: 'Serviços',
+        link: '#servicos'
+      },
+      {
+        text: 'Depoimentos',
+        link: '#depoimentos'
+      },
+      {
+        text: 'Política de Privacidade',
+        link: ''
+      }
     ],
     contatoArray: [
-      'projetolucromaximo@gmail.com',
-      '(32)998009178',
-      'CNPJ: 11.808.611/0001-87'
+      {
+        text: 'projetolucromaximo@gmail.com',
+        link: ''
+      },
+      {
+        text: '(32)998009178',
+        link: ''
+      },
+      {
+        text: 'CNPJ: 11.808.611/0001-87',
+        link: null
+      }
     ],
     isActive: false
   })

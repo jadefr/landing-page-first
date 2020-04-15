@@ -14,10 +14,11 @@
       >
         <v-card-text class="subtitle-1 font-weight-light">
           <p
-            v-for="item in items"
-            :key="item"
+            ref="button"
+            v-for="item in items" :key="item"
+            @click="$vuetify.goTo(item.link, linear, 900, -6)"
           >
-            {{ item }}
+           {{ item.text }}
           </p>
         </v-card-text>
       </v-row>
@@ -29,11 +30,19 @@ export default {
   name: 'FooterInfo',
   props: {
     title: String,
-    items: Array
+    items: {
+      link: String,
+      text: String
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-
+ p {
+    &:hover{
+      cursor: pointer;
+      color: #715f58;
+    }
+ }
 </style>
