@@ -64,12 +64,6 @@
                   >
                   </v-carousel-item>
                 </v-carousel>
-                <!--                <v-img-->
-                <!--                  justify="center"-->
-                <!--                  class="my-3"-->
-                <!--                  id="sobre-nos-img"-->
-                <!--                  src="../assets/img/carousel5.jpeg"-->
-                <!--                ></v-img>-->
               </v-col>
             </v-row>
           </div>

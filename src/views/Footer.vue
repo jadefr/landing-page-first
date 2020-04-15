@@ -68,7 +68,7 @@
       <!-- Credits -->
       <v-card>
         <v-card-text class="white--text mt-1 font-weight-light" id="credits">
-          <p><a href="">Desenvolvido por Jade Ferreira</a></p>
+          <p><a href="https://jadeferreira.com.br/" target="_blank">Desenvolvido por Jade Ferreira</a></p>
         </v-card-text>
       </v-card>
     </v-card>
@@ -144,7 +144,8 @@ export default {
           color: inherit;
 
           &:hover {
-            color: #3a4b40;
+            /*color: #3a4b40;*/
+            color: white;
           }
         }
       }
