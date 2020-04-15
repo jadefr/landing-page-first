@@ -19,9 +19,6 @@ export default {
   props: {
     itemURL: String,
     itemText: String
-  },
-  created () {
-    console.log(this.$props.itemURL)
   }
 }
 </script>
