@@ -17,7 +17,7 @@
           :src="img"
         >
       </v-avatar>
-      <v-card-text v-html="name + position"></v-card-text>
+      <v-card-text v-html="name + position" class="body-1 font-weight-light"></v-card-text>
     </div>
   </div>
 </template>
