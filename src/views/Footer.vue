@@ -105,7 +105,7 @@ export default {
       },
       {
         text: 'Política de Privacidade',
-        link: ''
+        link: '/politica-de-privacidade'
       }
     ],
     contatoArray: [
