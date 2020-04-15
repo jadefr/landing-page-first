@@ -13,47 +13,16 @@
           class="pt-6 pb-4"
         >
         <!-- Mapa do Site -->
-        <div id="mapa-do-site">
-          <v-row
-            justify="center"
-            tile
-          >
-            <v-card-title class="headline font-weight-regular">
-              Mapa do Site
-            </v-card-title>
-          </v-row>
-          <v-row
-            justify="left"
-            tile
-          >
-            <v-card-text class="subtitle-1 font-weight-light">
-              <p>Sobre nós</p>
-              <p>Serviços</p>
-              <p>Depoimentos</p>
-              <p>Política de Privacidade</p>
-            </v-card-text>
-          </v-row>
-        </div>
+          <FooterInfo
+            :title="mapaDoSite"
+            :items="mapaDoSiteArray"
+          />
 
         <!-- Contato -->
-        <div id="contato">
-          <v-row
-            justify="center"
-          >
-            <v-card-title class="headline font-weight-regular">
-              Contato
-            </v-card-title>
-          </v-row>
-          <v-row
-            justify="center"
-          >
-            <v-card-text class="subtitle-1 font-weight-light">
-              <p>projetolucromaximo@gmail.com</p>
-              <p>(32)998009178</p>
-              <p>CNPJ: 11.808.611/0001-87</p>
-            </v-card-text>
-          </v-row>
-        </div>
+          <FooterInfo
+            :title="contato"
+            :items="contatoArray"
+          />
 
         <!-- Footer Logo -->
         <div id="footer-logo">
@@ -98,7 +67,7 @@
       <!-- Credits -->
       <v-card>
         <v-card-text class="white--text mt-1 font-weight-light" id="credits">
-          <p>Desenvolvido por <a href="">Jade Ferreira</a></p>
+          <p><a href="">Desenvolvido por Jade Ferreira</a></p>
         </v-card-text>
       </v-card>
     </v-card>
@@ -106,15 +75,30 @@
 </template>
 
 <script>
+import FooterInfo from '../components/FooterInfo'
 export default {
   name: 'Footer',
+  components: { FooterInfo },
   data: () => ({
+    mapaDoSite: 'Mapa do Site',
+    contato: 'Contato',
     icons: [
       'fab fa-whatsapp',
       'fab fa-facebook',
       'fab fa-instagram',
       'fab fa-linkedin',
       'fab fa-youtube'
+    ],
+    mapaDoSiteArray: [
+      'Sobre nós',
+      'Serviços',
+      'Depoimentos',
+      'Política de Privacidade'
+    ],
+    contatoArray: [
+      'projetolucromaximo@gmail.com',
+      '(32)998009178',
+      'CNPJ: 11.808.611/0001-87'
     ],
     isActive: false
   })

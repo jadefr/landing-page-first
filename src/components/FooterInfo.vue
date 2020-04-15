@@ -5,7 +5,7 @@
         tile
       >
         <v-card-title class="headline font-weight-regular">
-          Mapa do Site
+         {{ title }}
         </v-card-title>
       </v-row>
       <v-row
@@ -13,10 +13,12 @@
         tile
       >
         <v-card-text class="subtitle-1 font-weight-light">
-          <p>Sobre nós</p>
-          <p>Serviços</p>
-          <p>Depoimentos</p>
-          <p>Política de Privacidade</p>
+          <p
+            v-for="item in items"
+            :key="item"
+          >
+            {{ item }}
+          </p>
         </v-card-text>
       </v-row>
     </div>
@@ -24,10 +26,14 @@
 
 <script>
 export default {
-  name: 'FooterInfo'
+  name: 'FooterInfo',
+  props: {
+    title: String,
+    items: Array
+  }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>
