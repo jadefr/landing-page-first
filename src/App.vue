@@ -37,11 +37,14 @@
         :item-text="obj.itemText"
       />
     </v-app-bar>
-<!--    <v-content>-->
-<!--      <LandingPage/>-->
-<!--    </v-content>-->
-    <router-link to="/"></router-link>
-    <router-view />
+    <v-content>
+      <LandingPage/>
+    </v-content>
+
+    <!-- Router Link -->
+<!--    <router-link to="/"></router-link>-->
+<!--    <router-view />-->
+
     <!-- Footer -->
     <Footer/>
   </v-app>
@@ -49,7 +52,7 @@
 </template>
 
 <script>
-// import LandingPage from './views/LandingPage'
+import LandingPage from './views/LandingPage'
 import Footer from './views/Footer'
 import AppBarBtn from './components/AppBarBtn'
 
@@ -57,8 +60,8 @@ export default {
   name: 'App',
   components: {
     AppBarBtn,
-    Footer
-    // LandingPage
+    Footer,
+    LandingPage
   },
   data () {
     return {
