@@ -2,58 +2,52 @@
   <div class="landing-page-view-container">
 
     <!-- Header -->
-    <div class="header h-100">
-      <!-- Parallax -->
-      <v-parallax
-        dark
-        src="../assets/img/bg.png"
+    <section class="header">
+      <v-row
+        align="center"
+        justify="center"
       >
-        <v-row
-          align="center"
-          justify="center"
-        >
-          <v-col class="text-center" cols="12" id="parallax-text">
-            <h1 class="display-4 font-weight-medium mb-4">Projeto Lucro Máximo</h1>
-            <h4 class="display-1 font-regular mt-4">Consultoria agropecuária</h4>
-            <v-btn
-              class="mt-5"
-              outlined
-              color="white"
-              dark
-              large
-              @click="$vuetify.goTo('#sobre-nos', linear, 900, -6)"
-            >
-              Conheça
-            </v-btn>
-          </v-col>
-        </v-row>
-      </v-parallax>
-    </div>
+        <v-col class="text-center white--text" id="header-text">
+          <h1 class="display-4 font-weight-medium mb-4">Projeto Lucro Máximo</h1>
+          <h4 class="display-1 font-regular mt-4">Consultoria agropecuária</h4>
+          <v-btn
+            class="mt-5"
+            outlined
+            color="white"
+            dark
+            large
+            @click="$vuetify.goTo('#sobre-nos', linear, 900, -6)"
+          >
+            Conheça
+          </v-btn>
+        </v-col>
+      </v-row>
+    </section>
 
-    <!-- Sobre Nós -->
-    <section id="sobre-nos">
-      <v-row justify="center" class="text-center my-4 mx-3">
-        <v-col class="col-sm-12 col-md-10">
-          <!-- Title -->
-          <h1 class="display-1 font-weight-light mb-9">Sobre Nós</h1>
-          <div class="sobre-nos-content">
-            <!-- Text -->
-            <p class="sobre-nos-paragraph title font-weight-light" id="first-paragraph">
-              O Projeto Lucro Máximo surgiu em 2010, com o intuito de difundir a tecnologia no campo, levando mais
-              conhecimento e tecnologia ao produtor.
-              O projeto é dirigido por Adilson Esquerdo Ferreira, zootecnista, formado pela Universidade Federal Rural
-              do
-              Rio de Janeiro em 2007,
-              além de contar com o auxílio de outros profissionais da área agrícola (Médico Veterinário, Agrônomo,
-              Técnico
-              Agrícola e Administrador de empresas).
-            </p>
-            <!-- Image -->
-            <div id="footer-logo">
-              <v-col
-                align="center"
-                class="pt-6 pb-4"
-              >
+  <!-- Sobre Nós -->
+  <section id="sobre-nos">
+    <v-row justify="center" class="text-center my-4 mx-3">
+      <v-col class="col-sm-12 col-md-10">
+        <!-- Title -->
+        <h1 class="display-1 font-weight-light mb-9">Sobre Nós</h1>
+        <div class="sobre-nos-content">
+          <!-- Text -->
+          <p class="sobre-nos-paragraph title font-weight-light" id="first-paragraph">
+            O Projeto Lucro Máximo surgiu em 2010, com o intuito de difundir a tecnologia no campo, levando mais
+            conhecimento e tecnologia ao produtor.
+            O projeto é dirigido por Adilson Esquerdo Ferreira, zootecnista, formado pela Universidade Federal Rural
+            do
+            Rio de Janeiro em 2007,
+            além de contar com o auxílio de outros profissionais da área agrícola (Médico Veterinário, Agrônomo,
+            Técnico
+            Agrícola e Administrador de empresas).
+          </p>
+          <!-- Image -->
+          <div id="footer-logo">
+            <v-col
+              align="center"
+              class="pt-6 pb-4"
+            >
               <v-lazy
                 v-model="isActive"
                 :options="{
@@ -70,79 +64,79 @@
                   ></v-img>
                 </a>
               </v-lazy>
-              </v-col>
-            </div>
-<!--            <v-row-->
-<!--              align="center"-->
-<!--              justify="center"-->
-<!--            >-->
-<!--              <v-col class="col-sm-12 col-md-8">-->
-<!--                <v-carousel :show-arrows="false"-->
-<!--                            cycle-->
-<!--                            hide-delimiters-->
-<!--                >-->
-<!--                  <v-carousel-item-->
-<!--                    v-for="(obj, key) in carousel" :key="key"-->
-<!--                    :src="img(obj)"-->
-<!--                  >-->
-<!--                  </v-carousel-item>-->
-<!--                </v-carousel>-->
-<!--              </v-col>-->
-<!--            </v-row>-->
+            </v-col>
           </div>
-        </v-col>
-      </v-row>
-    </section>
+          <!--            <v-row-->
+          <!--              align="center"-->
+          <!--              justify="center"-->
+          <!--            >-->
+          <!--              <v-col class="col-sm-12 col-md-8">-->
+          <!--                <v-carousel :show-arrows="false"-->
+          <!--                            cycle-->
+          <!--                            hide-delimiters-->
+          <!--                >-->
+          <!--                  <v-carousel-item-->
+          <!--                    v-for="(obj, key) in carousel" :key="key"-->
+          <!--                    :src="img(obj)"-->
+          <!--                  >-->
+          <!--                  </v-carousel-item>-->
+          <!--                </v-carousel>-->
+          <!--              </v-col>-->
+          <!--            </v-row>-->
+        </div>
+      </v-col>
+    </v-row>
+  </section>
 
-    <!-- Serviços -->
-    <section id="servicos" class="mt-10">
-      <!-- Card -->
-      <ServiceCard
-        v-for="(obj, key) in services" :key="key"
-        :background="color(obj.color)"
-        :title="obj.title"
-        :img="img(obj.img)"
-        :text="obj.text"
-      />
-    </section>
+  <!-- Serviços -->
+  <section id="servicos" class="mt-10">
+    <!-- Card -->
+    <ServiceCard
+      v-for="(obj, key) in services" :key="key"
+      :background="color(obj.color)"
+      :title="obj.title"
+      :img="img(obj.img)"
+      :text="obj.text"
+    />
+  </section>
 
-    <!-- Depoimentos -->
-    <section id="depoimentos">
-      <v-row class="text-center my-4 mx-10" id="depoimentos-row">
-        <v-col
-          id="depoimentos-col"
+  <!-- Depoimentos -->
+  <section id="depoimentos">
+    <v-row class="text-center my-4 mx-10" id="depoimentos-row">
+      <v-col
+        id="depoimentos-col"
+      >
+        <!-- Title -->
+        <h1 class="display-1 font-weight-light mb-9">Depoimentos</h1>
+
+        <!-- Carousel -->
+        <v-carousel
+          :height="[$vuetify.breakpoint.mdAndUp ? '600' : 'this.$props.height']"
+          cycle
+          hide-delimiters
         >
-          <!-- Title -->
-          <h1 class="display-1 font-weight-light mb-9">Depoimentos</h1>
-
-          <!-- Carousel -->
-          <v-carousel
-            :height="[$vuetify.breakpoint.mdAndUp ? '600' : 'this.$props.height']"
-            cycle
-            hide-delimiters
+          <v-carousel-item
+            v-for="(obj, key) in testimonials" :key="key"
           >
-            <v-carousel-item
-              v-for="(obj, key) in testimonials" :key="key"
-            >
-              <Testimonial
-                :text="obj.text"
-                :img="img(obj.img)"
-                :name="obj.name"
-                :position="obj.position"
-              />
-            </v-carousel-item>
-          </v-carousel>
-        </v-col>
-      </v-row>
-    </section>
+            <Testimonial
+              :text="obj.text"
+              :img="img(obj.img)"
+              :name="obj.name"
+              :position="obj.position"
+            />
+          </v-carousel-item>
+        </v-carousel>
+      </v-col>
+    </v-row>
+  </section>
 
-    <!-- Parallax -->
-    <v-parallax
-      height="500"
-      dark
-      src="../assets/img/img-footer.jpg"
-    >
-    </v-parallax>
+  <!-- Parallax -->
+  <v-parallax
+    height="500"
+    dark
+    src="../assets/img/img-footer.jpg"
+  >
+  </v-parallax>
   </div>
 </template>
 
@@ -164,7 +158,7 @@ export default {
         {
           title: 'Projeto de Pastejo',
           text: 'Utilização de dejetos do curral nas pastagens via motobomba ou gravidade, \n' +
-            'visando o aumento da fertilidade do solo e da produtividade da forrageira escolhida',
+              'visando o aumento da fertilidade do solo e da produtividade da forrageira escolhida',
           color: 'maroon',
           img: 'img2'
         },
@@ -264,34 +258,16 @@ export default {
     }
 
     .header {
-
-      .v-parallax {
-        min-height: 100vh;
-
-        #parallax-text {
-          /*opacity: 1;*/
-          color: #de7f1c;
-
-          h1 {
-            /*filter: initial;*/
-          }
-
-          .v-btn {
-            background-color: #004D4C;
-            opacity: 0.7;
-
-            &:hover {
-              opacity: 1;
-            }
-          }
-        }
-      }
+      padding-top: 30vh;
+      min-height: 100vh;
+      background-image: url("../assets/img/bg.png");
     }
 
     #sobre-nos {
       .v-image {
         border-radius: 7px;
       }
+
       #footer-logo-img {
         height: 300px;
         width: 300px;
