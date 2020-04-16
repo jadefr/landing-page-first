@@ -11,6 +11,7 @@ body {
     .v-window {
       border-radius: 7px;
     }
+
     .header {
       padding-top: 30vh;
       min-height: 100vh;
@@ -33,6 +34,7 @@ body {
         }
       }
     }
+
     #sobre-nos {
       h1 {
         font-family: $ubuntu;
@@ -49,6 +51,7 @@ body {
         width: 300px;
       }
     }
+
     #servicos {
       background-color: white;
 
@@ -59,7 +62,11 @@ body {
         }
       }
     }
+
     #depoimentos {
+      h1 {
+        font-family: $ubuntu;
+      }
       .v-carousel {
       }
     }

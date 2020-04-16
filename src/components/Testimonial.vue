@@ -4,11 +4,12 @@
     <div id="testimonial-card"
          class="ma-auto"
     >
-      <v-card-text
+      <p
         :class="[$vuetify.breakpoint.mdAndUp ? 'title font-weight-light' : 'subtitle-1 font-weight-light']"
         v-html="text"
+        id="testimonial-text"
       >
-      </v-card-text>
+      </p>
       <v-avatar
         class="mt-5"
         size="120"
@@ -17,7 +18,11 @@
           :src="img"
         >
       </v-avatar>
-      <v-card-text v-html="name + position" class="body-1 font-weight-light"></v-card-text>
+<!--      <p v-html="name + position" class="body-1 font-weight-light"></p>-->
+      <div class="text-box mt-3">
+        <span v-html="name" class="body-1 font-weight-light" id="testimonial-author"></span>
+        <span v-html="position" class="body-1 font-weight-light" id="testimonial-position"></span>
+      </div>
     </div>
   </div>
 </template>
@@ -36,6 +41,7 @@ export default {
 
 <style lang="scss" scoped>
   @import "../assets/sass/libraries/mixins";
+  @import '../assets/sass/base/_variables.scss';
 
   .testimonial-container {
 
@@ -43,8 +49,16 @@ export default {
       padding-left: 10%;
       padding-right: 10%;
 
-      .v-card-text {
-        background-color: black;
+      p {
+          font-family: $pt-serif;
+        }
+
+      .text-box {
+        display: block;
+        span {
+          font-family: $ubuntu;
+          line-height: 0.7rem;
+        }
       }
 
       @include sm {

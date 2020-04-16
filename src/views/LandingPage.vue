@@ -201,7 +201,7 @@ export default {
           position: '<br>Sócio na fazenda Santa Edwiges, em Santos Dumont - MG'
         },
         {
-          text: 'Ano passado [2019] fui informado que o Adilson estava desenvovendo projeto para credito rural.<br>Então fui até o sindicato de sapucaia estive com ele. Ele me orientou quais documentos eram necessários. <br>Na próxima semana voltei. E ele montou o projeto muito rapido, muito detalhado e com muita boa vontade. <br>Fui muito bem atendido. O banco aprovou o projeto na hoa. <br>Muito obrigado pelo teu serviço e tua boa vontade, Adilson',
+          text: 'Ano passado [2019] fui informado que o Adilson estava desenvovendo projeto para credito rural.<br>Então fui até o sindicato de sapucaia estive com ele. Ele me orientou quais documentos eram necessários. <br>Na próxima semana voltei. E ele montou o projeto muito rapido, muito detalhado e com muita boa vontade. <br>Fui muito bem atendido. O banco aprovou o projeto na hora. <br>Muito obrigado pelo teu serviço e tua boa vontade, Adilson',
           img: 'mauricio',
           name: '<strong>Maurício Assumpção Ribeiro</strong>',
           position: '<br>Agricultor, Sapucaia - RJ'
