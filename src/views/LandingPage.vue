@@ -143,30 +143,30 @@ export default {
       isActive: false,
       services: [
         {
-          title: 'Projeto de Pastejo',
-          text: 'Utilização de dejetos do curral nas pastagens via motobomba ou gravidade, \n' +
-              'visando o aumento da fertilidade do solo e da produtividade da forrageira escolhida',
-          color: 'maroon',
-          img: 'img2'
-        },
-        {
           title: 'Assistência Técnica Mensal',
           text: 'Consultorias semanais ou quinzenais na área da pecuária de leite e/ou pecuária de corte',
           color: 'green',
-          img: 'img1'
+          img: 'assistencia'
+        },
+        {
+          title: 'Projeto de Pastejo',
+          text: 'Utilização de dejetos do curral nas pastagens via motobomba ou gravidade, \n' +
+            'visando o aumento da fertilidade do solo e da produtividade da forrageira escolhida',
+          color: 'maroon',
+          img: 'pastejo'
         },
         {
           title: 'Projeto de Crédito Rural',
           text: 'Projetos para o produtor na Caixa Econômica Federal, Banco do Brasil ou Sicoob',
-          color: 'maroon',
-          img: 'img3'
+          color: 'green',
+          img: 'credito'
         },
         {
           title: 'Curso Online',
           text: 'Oferecemos conhecimento técnico aos produtores e trabalhadores rurais e capacitação dos técnicos ligados ao meio rural,  \n' +
               'com o intuito de levar mais tecnologia e conhecimento ao campo.\n',
-          color: 'green',
-          img: 'service4'
+          color: 'maroon',
+          img: 'curso'
         }
       ],
       testimonials: [
@@ -211,7 +211,7 @@ export default {
   methods: {
     color (obj) {
       let color = ''
-      if (obj.includes('maroon')) {
+      if (obj.includes('green')) {
         color = '#004d40'
         this.fontColor = 'white'
       } else {
