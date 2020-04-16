@@ -4,9 +4,9 @@
         justify="center"
         tile
       >
-        <v-card-title class="headline font-weight-regular">
+        <h3 class="headline font-weight-regular">
          {{ title }}
-        </v-card-title>
+        </h3>
       </v-row>
       <v-row
         justify="left"
@@ -40,8 +40,13 @@ export default {
 
 <style lang="scss" scoped>
   .footer-info-container {
+    @import '../assets/sass/base/_variables.scss';
+    h3 {
+    font-family: $ubuntu;
+    }
 
     p {
+      font-family: $serif;
       &:hover{
         cursor: pointer;
         color: #715f58;

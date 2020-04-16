@@ -36,12 +36,18 @@
     <v-row justify="center" class="text-center my-4 mx-3">
       <v-col class="col-sm-12 col-md-10">
         <!-- Title -->
-        <h1 class="display-1 font-weight-light mb-9">Sobre Nós</h1>
+        <h1
+          :class="[$vuetify.breakpoint.mdAndUp ? 'display-1 font-weight-light mb-9' : 'headline font-weight-light mb-9']"
+        >
+          Sobre Nós
+        </h1>
         <div class="sobre-nos-content">
           <!-- Text -->
-          <p class="sobre-nos-paragraph title font-weight-light" id="first-paragraph">
+          <p
+            :class="[$vuetify.breakpoint.mdAndUp ? 'title font-weight-light' : 'subtitle-1 font-weight-light']"
+          >
             O Projeto Lucro Máximo surgiu em 2010, com o intuito de difundir a tecnologia no campo, levando mais
-            conhecimento e tecnologia ao produtor.
+            conhecimento e tecnologia ao produtor.<br>
             O projeto é dirigido por Adilson Esquerdo Ferreira, zootecnista, formado pela Universidade Federal Rural
             do
             Rio de Janeiro em 2007,
@@ -53,7 +59,7 @@
           <div id="footer-logo">
             <v-col
               align="center"
-              class="pt-6 pb-4"
+              class="py-4"
             >
               <v-lazy
                 v-model="isActive"
@@ -104,6 +110,7 @@
       :title="obj.title"
       :img="img(obj.img)"
       :text="obj.text"
+      :font-color="fontColor"
     />
   </section>
 
@@ -220,7 +227,8 @@ export default {
         'carousel1', 'carousel2', 'carousel3', 'carousel4', 'carousel5', 'carousel6'
       ],
       height: '',
-      breakpoint: ''
+      breakpoint: '',
+      fontColor: ''
     }
   },
   computed: {
@@ -232,9 +240,13 @@ export default {
     color (obj) {
       let color = ''
       if (obj.includes('maroon')) {
-        color = '#715f58'
-      } else {
+        // color = '#715f58'
         color = '#004d40'
+        this.fontColor = 'white'
+      } else {
+        // color = '#004d40'
+        color = '#ffebcc'
+        this.fontColor = '#a06d5d'
       }
       return color
     },

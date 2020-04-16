@@ -128,6 +128,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import '../assets/sass/base/_variables.scss';
   .footer-view-container {
 
     #footer-container {
@@ -139,6 +140,7 @@ export default {
     #credits {
       p {
         color: #715f58;
+        font-family: $ubuntu;
 
         a {
           text-decoration: none;

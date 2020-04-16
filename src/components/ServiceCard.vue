@@ -1,8 +1,8 @@
 <template>
   <div class="service-card-container">
     <!-- Card -->
-    <div class="white--text"
-         :style="{'background-color':background}"
+    <div class="card-style"
+         :style="{'background-color':background, 'color':fontColor}"
     >
       <!-- Title -->
       <v-row
@@ -28,7 +28,7 @@
           </div>
           <!-- Text -->
           <div class="card-text col-sm-12 col-md-6" id="service-text">
-            <p :class="[$vuetify.breakpoint.mdAndUp ? 'headline font-weight-light' : 'title font-weight-light']">{{ text
+            <p :class="[$vuetify.breakpoint.mdAndUp ? 'headline font-weight-light' : 'subtitle-2 font-weight-light']">{{ text
               }}</p>
           </div>
           <!-- Button -->
@@ -53,7 +53,8 @@ export default {
     title: String,
     img: String,
     text: String,
-    background: String
+    background: String,
+    fontColor: String
   },
   data () {
     return {
@@ -64,6 +65,7 @@ export default {
     if (this.$props.title === 'Curso Online') {
       this.isCursoOnline = true
     }
+    console.log(this.$props.fontColor)
   }
 }
 </script>

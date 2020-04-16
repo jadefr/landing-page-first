@@ -18,7 +18,6 @@
           :src="img"
         >
       </v-avatar>
-<!--      <p v-html="name + position" class="body-1 font-weight-light"></p>-->
       <div class="text-box mt-3">
         <span v-html="name" class="body-1 font-weight-light" id="testimonial-author"></span>
         <span v-html="position" class="body-1 font-weight-light" id="testimonial-position"></span>
@@ -50,7 +49,8 @@ export default {
       padding-right: 10%;
 
       p {
-          font-family: $serif;
+        font-family: $ubuntu;
+        font-weight: 300;
         }
 
       .text-box {

@@ -23,6 +23,9 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+  @import '../assets/sass/base/_variables.scss';
+  span {
+    font-family: $ubuntu;
+  }
 </style>
