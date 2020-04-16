@@ -7,9 +7,17 @@
         align="center"
         justify="center"
       >
-        <v-col class="text-center" id="header-text">
-          <h1 class="display-4 font-weight-medium mb-4">Projeto Lucro Máximo</h1>
-          <h4 class="display-1 font-regular mt-4">Consultoria agropecuária</h4>
+        <v-col class="text-center px-4" id="header-text">
+          <h1
+            :class="[$vuetify.breakpoint.mdAndUp ? 'display-4 font-weight-medium mb-4' : 'display-3 font-weight-medium mb-4']"
+          >
+            Projeto Lucro Máximo
+          </h1>
+          <h4
+            :class="[$vuetify.breakpoint.mdAndUp ? 'display-1 font-regular mt-4' : 'headline font-regular mt-4']"
+          >
+            Consultoria agropecuária
+          </h4>
           <v-btn
               class="mt-5"
               outlined
@@ -101,17 +109,18 @@
 
   <!-- Depoimentos -->
   <section id="depoimentos">
-    <v-row class="text-center my-4 mx-10" id="depoimentos-row">
+    <v-row class="text-center my-4 mx-10 " id="depoimentos-row">
       <v-col
         id="depoimentos-col"
       >
         <!-- Title -->
-        <h1 class="display-1 font-weight-light mb-9">Depoimentos</h1>
+        <h1 class="display-1 font-weight-light mt-9 mb-9">Depoimentos</h1>
 
         <!-- Carousel -->
         <v-carousel
           :height="[$vuetify.breakpoint.mdAndUp ? '600' : 'this.$props.height']"
           cycle
+          interval="10000"
           hide-delimiters
         >
           <v-carousel-item
@@ -183,25 +192,25 @@ export default {
       ],
       testimonials: [
         {
-          text: 'Tive uma grande honra de poder estagiar com o Adilson; o principal aprendizado foi o amor e a determinação que ele tem pela profissão e pelo seu trabalho. <br/>Realmente é uma pessoa que respira a zootecnia.<br/> Ao longo desses anos sempre me inspirei muito nele.',
+          text: '<q>Tive uma grande honra de poder estagiar com o Adilson; o principal aprendizado foi o amor e a determinação que ele tem pela profissão e pelo seu trabalho. <br/>Realmente é uma pessoa que respira a zootecnia.<br/> Ao longo desses anos sempre me inspirei muito nele.</q>',
           img: 'rodrigo-lima-granato',
           name: '<strong>Rodrigo Lima Granato</strong>',
           position: '<br>Consultor técnico de bovinos de corte da Agroceres, em Barra do Garças - MT'
         },
         {
-          text: 'Após um período da aplicação de seus sábios ensinamento na Fazenda Sucupira, hoje estamos colhendo frutos representados pelas arrobas de boi excessivas, em vista principalmente do resultado do capim que ao receber o devido tratamento traduziu-se no  hoje festejado resultado positivo da atividade. <br/> Sua assistência marcou um novo e promissor destino em nossas propriedades.',
+          text: '<q>Após um período da aplicação de seus sábios ensinamento na Fazenda Sucupira, hoje estamos colhendo frutos representados pelas arrobas de boi excessivas, em vista principalmente do resultado do capim que ao receber o devido tratamento traduziu-se no  hoje festejado resultado positivo da atividade. <br/> Sua assistência marcou um novo e promissor destino em nossas propriedades.</q>',
           img: 'jose-manuel-tiago',
           name: '<strong>José Manoel Tiago Bittencourt</strong>',
           position: '<br>Advogado e pecuarista'
         },
         {
-          text: 'Há 3 anos iniciamos um trabalho voltado na produção de leite, no qual iniciamos um parceira de sucesso junto a empresa  Lucro Máximo, no qual o Adilson nos orientou e vem nos dando total apoio não só para desenvolver o sistema, desde os cuidados  com rebanho e plantio, como todo o sistema geral da fazenda.<br/> Começamos com 100 litros dia até chegarmos a 1400 litros dia. <br/>Só tenho a agradecer a parceria da empresa Lucro Máximo e da pessoa maravilhosa que é Sr Adilson; total companheirismo e dedicação para que possamos alcançar nosso objetivo.<br/> Todas as tomadas de decisões ele sempre presente e nos orientando da melhor forma possível.<br/> Muito obrigado Lucro Máximo e ao Sr Adilson Ferreira',
+          text: '<q>Há 3 anos iniciamos um trabalho voltado na produção de leite, no qual iniciamos um parceira de sucesso junto a empresa  Lucro Máximo, no qual o Adilson nos orientou e vem nos dando total apoio não só para desenvolver o sistema, desde os cuidados  com rebanho e plantio, como todo o sistema geral da fazenda.<br/> Começamos com 100 litros dia até chegarmos a 1400 litros dia. <br/>Só tenho a agradecer a parceria da empresa Lucro Máximo e da pessoa maravilhosa que é Sr Adilson; total companheirismo e dedicação para que possamos alcançar nosso objetivo.<br/> Todas as tomadas de decisões ele sempre presente e nos orientando da melhor forma possível.<br/> Muito obrigado Lucro Máximo e ao Sr Adilson Ferreira.</q>',
           img: 'carlos-joel',
           name: '<strong>Carlos Joel</strong>',
           position: '<br>Sócio na fazenda Santa Edwiges, em Santos Dumont - MG'
         },
         {
-          text: 'Ano passado [2019] fui informado que o Adilson estava desenvovendo projeto para credito rural.<br>Então fui até o sindicato de sapucaia estive com ele. Ele me orientou quais documentos eram necessários. <br>Na próxima semana voltei. E ele montou o projeto muito rapido, muito detalhado e com muita boa vontade. <br>Fui muito bem atendido. O banco aprovou o projeto na hora. <br>Muito obrigado pelo teu serviço e tua boa vontade, Adilson',
+          text: '<q>Ano passado [2019] fui informado que o Adilson estava desenvovendo projeto para credito rural.<br>Então fui até o sindicato de sapucaia estive com ele. Ele me orientou quais documentos eram necessários. <br>Na próxima semana voltei. E ele montou o projeto muito rapido, muito detalhado e com muita boa vontade. <br>Fui muito bem atendido. O banco aprovou o projeto na hora. <br>Muito obrigado pelo teu serviço e tua boa vontade, Adilson</q>.',
           img: 'mauricio',
           name: '<strong>Maurício Assumpção Ribeiro</strong>',
           position: '<br>Agricultor, Sapucaia - RJ'

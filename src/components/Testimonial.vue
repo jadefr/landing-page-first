@@ -50,7 +50,7 @@ export default {
       padding-right: 10%;
 
       p {
-          font-family: $pt-serif;
+          font-family: $serif;
         }
 
       .text-box {
