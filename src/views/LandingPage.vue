@@ -166,7 +166,7 @@ export default {
           text: 'Oferecemos conhecimento técnico aos produtores e trabalhadores rurais e capacitação dos técnicos ligados ao meio rural,  \n' +
               'com o intuito de levar mais tecnologia e conhecimento ao campo.\n',
           color: 'green',
-          img: 'img4'
+          img: 'service4'
         }
       ],
       testimonials: [
@@ -212,11 +212,9 @@ export default {
     color (obj) {
       let color = ''
       if (obj.includes('maroon')) {
-        // color = '#004d40'
         color = '#004d40'
         this.fontColor = 'white'
       } else {
-        // color = '#004d40'
         color = '#ffeccc'
         this.fontColor = '#392f24'
       }

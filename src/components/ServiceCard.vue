@@ -12,7 +12,7 @@
         id="title-row"
       >
         <span
-          :class="[$vuetify.breakpoint.mdAndUp ? 'display-1 font-weight-light' : 'headline font-weight-light']"
+          :class="[$vuetify.breakpoint.mdAndUp ? 'display-1 font-weight-regular' : 'headline font-weight-regular']"
         >
           {{ title }}
         </span>
