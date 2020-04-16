@@ -17,17 +17,20 @@
     font-family: $ubuntu;
   }
 
-  span {
-    font-family: $ubuntu;
+  #title-row {
+    span {
+      font-family: $ubuntu;
+    }
   }
 
   .service-content {
     text-align: center;
 
     #service-text {
-      p {
+      span {
         font-family: $serif;
       }
+      padding: 0 10%;
     }
 
     @include sm {
@@ -39,10 +42,10 @@
           max-height: 240px;
         }
       }
-      #service-text {
-        padding-right: 10%;
-        padding-left: 10%;
-      }
+      //#service-text {
+      //  padding-right: 10%;
+      //  padding-left: 10%;
+      //}
     }
 
     @include md {
@@ -50,12 +53,12 @@
         margin-left: 20%;
       }
 
-      #service-text {
-        p {
-          margin-left: 20%;
-          padding-right: 20%;
-        }
-      }
+      //#service-text {
+      //  p {
+      //    margin-left: 20%;
+      //    padding-right: 20%;
+      //  }
+      //}
     }
   }
 }

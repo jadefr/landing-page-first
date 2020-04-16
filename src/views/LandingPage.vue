@@ -61,41 +61,13 @@
               align="center"
               class="py-4"
             >
-              <v-lazy
-                v-model="isActive"
-                :options="{
-          threshold: .5
-        }"
-                min-height="240"
-                transition="fade-transition"
-              >
-                <a href="#">
-                  <v-img
-                    class="my-3"
-                    id="footer-logo-img"
-                    src="../assets/img/logo.png"
-                  ></v-img>
-                </a>
-              </v-lazy>
+              <v-img
+                class="my-3"
+                id="footer-logo-img"
+                src="../assets/img/logo.png"
+              ></v-img>
             </v-col>
           </div>
-          <!--            <v-row-->
-          <!--              align="center"-->
-          <!--              justify="center"-->
-          <!--            >-->
-          <!--              <v-col class="col-sm-12 col-md-8">-->
-          <!--                <v-carousel :show-arrows="false"-->
-          <!--                            cycle-->
-          <!--                            hide-delimiters-->
-          <!--                >-->
-          <!--                  <v-carousel-item-->
-          <!--                    v-for="(obj, key) in carousel" :key="key"-->
-          <!--                    :src="img(obj)"-->
-          <!--                  >-->
-          <!--                  </v-carousel-item>-->
-          <!--                </v-carousel>-->
-          <!--              </v-col>-->
-          <!--            </v-row>-->
         </div>
       </v-col>
     </v-row>
@@ -245,8 +217,8 @@ export default {
         this.fontColor = 'white'
       } else {
         // color = '#004d40'
-        color = '#ffebcc'
-        this.fontColor = '#a06d5d'
+        color = '#ffeccc'
+        this.fontColor = '#392f24'
       }
       return color
     },
