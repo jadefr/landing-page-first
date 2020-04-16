@@ -1,7 +1,3 @@
-import img1 from '../assets/img/img1.jpeg'
-import img2 from '../assets/img/img2.jpeg'
-import img3 from '../assets/img/img3.jpeg'
-import img4 from '../assets/img/img4.jpeg'
 import assistencia from '../assets/img/assistencia.png'
 import credito from '../assets/img/credito.png'
 import pastejo from '../assets/img/pastejo.png'
@@ -18,5 +14,5 @@ import carousel5 from '../assets/img/carousel5.jpeg'
 import carousel6 from '../assets/img/carousel6.jpeg'
 
 export default {
-  imgs: [img1, img2, img3, img4, assistencia, credito, pastejo, curso, carlosJoel, joseManuel, rodrigoLima, mauricio, carousel1, carousel2, carousel3, carousel4, carousel5, carousel6]
+  imgs: [assistencia, credito, pastejo, curso, carlosJoel, joseManuel, rodrigoLima, mauricio, carousel1, carousel2, carousel3, carousel4, carousel5, carousel6]
 }

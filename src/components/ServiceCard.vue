@@ -71,7 +71,6 @@ export default {
     if (this.$props.title === 'Curso Online') {
       this.isCursoOnline = true
     }
-    console.log(this.$props.fontColor)
   }
 }
 </script>
