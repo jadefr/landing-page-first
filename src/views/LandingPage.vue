@@ -212,7 +212,7 @@ export default {
     color (obj) {
       let color = ''
       if (obj.includes('maroon')) {
-        // color = '#715f58'
+        // color = '#004d40'
         color = '#004d40'
         this.fontColor = 'white'
       } else {

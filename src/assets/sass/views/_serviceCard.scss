@@ -13,8 +13,13 @@
   }
 
   .v-btn {
-    background-color: #008978;
+    //background-color: #008978;
+    background-color: #f64d3d;
+    //color: #a4705b;
     font-family: $ubuntu;
+    &:hover {
+      opacity: 0.6;
+    }
   }
 
   #title-row {
