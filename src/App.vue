@@ -86,7 +86,5 @@ export default {
 </script>
 
 <style>
-  .app {
-    font-family: Georgia, "Times New Roman", serif !important;
-  }
+
 </style>

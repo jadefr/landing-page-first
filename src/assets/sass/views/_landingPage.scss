@@ -1,0 +1,67 @@
+@import '../libraries/_mixins.scss';
+@import '../base/_variables.scss';
+
+body, html {
+  height: 100%;
+}
+
+body {
+
+  .landing-page-view-container {
+    .v-window {
+      border-radius: 7px;
+    }
+    .header {
+      padding-top: 30vh;
+      min-height: 100vh;
+      //background-image: url("../assets/img/bg.png");
+      #header-text {
+        /*color: #ff791f;*/
+        color: white;
+        h1 {
+          font-family: $ubuntu;
+          font-weight: 500;
+        }
+        h4 {
+          font-family: 'Ubuntu', sans-serif !important;
+          font-weight: 700;
+        }
+        .v-btn {
+          font-family: 'Ubuntu', sans-serif !important;
+          font-weight: 500;
+          /*color: #ff791f;*/
+        }
+      }
+    }
+    #sobre-nos {
+      h1 {
+        font-family: $ubuntu;
+      }
+      p {
+        font-family: $pt-serif;
+      }
+      .v-image {
+        border-radius: 7px;
+      }
+
+      #footer-logo-img {
+        height: 300px;
+        width: 300px;
+      }
+    }
+    #servicos {
+      background-color: white;
+
+      .card-container {
+
+        .card-heading {
+          text-align: center;
+        }
+      }
+    }
+    #depoimentos {
+      .v-carousel {
+      }
+    }
+  }
+}

@@ -69,58 +69,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/sass/libraries/mixins";
-
-  .service-card-container {
-    font-family: 'PT Sans', sans-serif;
-
-    #card-background {
-      opacity: 0.5;
-    }
-
-    hr {
-      color: white;
-    }
-
-    .v-image {
-      border-radius: 7px;
-      border: white solid 1px;
-    }
-
-    .v-btn {
-      background-color: #008978;
-    }
-
-    .service-content {
-      text-align: center;
-
-      @include sm {
-        #service-img {
-          padding-left: 10%;
-          padding-right: 10%;
-
-          #service-v-img {
-            max-height: 240px;
-          }
-        }
-        #service-text {
-          padding-right: 10%;
-          padding-left: 10%;
-        }
-      }
-
-      @include md {
-        #service-v-img {
-          margin-left: 20%;
-        }
-
-        #service-text {
-          p {
-            margin-left: 20%;
-            padding-right: 20%;
-          }
-        }
-      }
-    }
-  }
+  @import "../assets/sass/views/serviceCard";
 </style>

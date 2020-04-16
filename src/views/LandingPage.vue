@@ -7,19 +7,18 @@
         align="center"
         justify="center"
       >
-        <v-col class="text-center white--text" id="header-text">
+        <v-col class="text-center" id="header-text">
           <h1 class="display-4 font-weight-medium mb-4">Projeto Lucro Máximo</h1>
           <h4 class="display-1 font-regular mt-4">Consultoria agropecuária</h4>
           <v-btn
-            class="mt-5"
-            outlined
-            color="white"
-            dark
-            large
-            @click="$vuetify.goTo('#sobre-nos', linear, 900, -6)"
-          >
-            Conheça
-          </v-btn>
+              class="mt-5"
+              outlined
+              dark
+              large
+              @click="$vuetify.goTo('#sobre-nos', linear, 900, -6)"
+            >
+              Conheça
+            </v-btn>
         </v-col>
       </v-row>
     </section>
@@ -249,45 +248,13 @@ export default {
 
 <style lang="scss" scoped>
   @import "../assets/sass/libraries/mixins";
+  @import "../assets/sass/views/landingPage";
 
-  .landing-page-view-container {
-    font-family: Georgia, "Times New Roman", serif !important;
-
-    .v-window {
-      border-radius: 7px;
-    }
-
+  body, html {
+    font-family: 'Ubuntu', sans-serif !important;
     .header {
-      padding-top: 30vh;
-      min-height: 100vh;
       background-image: url("../assets/img/bg.png");
     }
-
-    #sobre-nos {
-      .v-image {
-        border-radius: 7px;
-      }
-
-      #footer-logo-img {
-        height: 300px;
-        width: 300px;
-      }
-    }
-
-    #servicos {
-      background-color: white;
-
-      .card-container {
-
-        .card-heading {
-          text-align: center;
-        }
-      }
-    }
-
-    #depoimentos {
-      .v-carousel {
-      }
-    }
   }
+
 </style>
