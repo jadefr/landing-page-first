@@ -129,6 +129,7 @@ export default {
 
 <style lang="scss" scoped>
   .footer-view-container {
+
     #footer-container {
       #footer-logo-img {
         height: 240px;
@@ -144,8 +145,7 @@ export default {
           color: inherit;
 
           &:hover {
-            /*color: #3a4b40;*/
-            color: white;
+            color: #3a4b40;
           }
         }
       }

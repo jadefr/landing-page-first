@@ -1,4 +1,5 @@
 <template>
+  <div class="app">
   <v-app>
     <!-- AppBar -->
     <v-app-bar
@@ -44,6 +45,7 @@
     <!-- Footer -->
     <Footer/>
   </v-app>
+  </div>
 </template>
 
 <script>
@@ -82,3 +84,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .app {
+    font-family: Georgia, "Times New Roman", serif !important;
+  }
+</style>

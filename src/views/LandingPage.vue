@@ -6,7 +6,7 @@
       <!-- Parallax -->
       <v-parallax
         dark
-        src="../assets/img/bg.jpeg"
+        src="../assets/img/bg.png"
       >
         <v-row
           align="center"
@@ -49,23 +49,46 @@
               Agrícola e Administrador de empresas).
             </p>
             <!-- Image -->
-            <v-row
-              align="center"
-              justify="center"
-            >
-              <v-col class="col-sm-12 col-md-8">
-                <v-carousel :show-arrows="false"
-                            cycle
-                            hide-delimiters
-                >
-                  <v-carousel-item
-                    v-for="(obj, key) in carousel" :key="key"
-                    :src="img(obj)"
-                  >
-                  </v-carousel-item>
-                </v-carousel>
+            <div id="footer-logo">
+              <v-col
+                align="center"
+                class="pt-6 pb-4"
+              >
+              <v-lazy
+                v-model="isActive"
+                :options="{
+          threshold: .5
+        }"
+                min-height="240"
+                transition="fade-transition"
+              >
+                <a href="#">
+                  <v-img
+                    class="my-3"
+                    id="footer-logo-img"
+                    src="../assets/img/logo.png"
+                  ></v-img>
+                </a>
+              </v-lazy>
               </v-col>
-            </v-row>
+            </div>
+<!--            <v-row-->
+<!--              align="center"-->
+<!--              justify="center"-->
+<!--            >-->
+<!--              <v-col class="col-sm-12 col-md-8">-->
+<!--                <v-carousel :show-arrows="false"-->
+<!--                            cycle-->
+<!--                            hide-delimiters-->
+<!--                >-->
+<!--                  <v-carousel-item-->
+<!--                    v-for="(obj, key) in carousel" :key="key"-->
+<!--                    :src="img(obj)"-->
+<!--                  >-->
+<!--                  </v-carousel-item>-->
+<!--                </v-carousel>-->
+<!--              </v-col>-->
+<!--            </v-row>-->
           </div>
         </v-col>
       </v-row>
@@ -117,7 +140,7 @@
     <v-parallax
       height="500"
       dark
-      src="../assets/img/img12.jpeg"
+      src="../assets/img/img-footer.jpg"
     >
     </v-parallax>
   </div>
@@ -136,19 +159,20 @@ export default {
   },
   data () {
     return {
+      isActive: false,
       services: [
-        {
-          title: 'Assistência Técnica Mensal',
-          text: 'Consultorias semanais ou quinzenais na área da pecuária de leite e/ou pecuária de corte',
-          color: 'maroon',
-          img: 'img1'
-        },
         {
           title: 'Projeto de Pastejo',
           text: 'Utilização de dejetos do curral nas pastagens via motobomba ou gravidade, \n' +
-              'visando o aumento da fertilidade do solo e da produtividade da forrageira escolhida',
-          color: 'green',
+            'visando o aumento da fertilidade do solo e da produtividade da forrageira escolhida',
+          color: 'maroon',
           img: 'img2'
+        },
+        {
+          title: 'Assistência Técnica Mensal',
+          text: 'Consultorias semanais ou quinzenais na área da pecuária de leite e/ou pecuária de corte',
+          color: 'green',
+          img: 'img1'
         },
         {
           title: 'Projeto de Crédito Rural',
@@ -233,6 +257,7 @@ export default {
   @import "../assets/sass/libraries/mixins";
 
   .landing-page-view-container {
+    font-family: Georgia, "Times New Roman", serif !important;
 
     .v-window {
       border-radius: 7px;
@@ -241,15 +266,14 @@ export default {
     .header {
 
       .v-parallax {
-        opacity: 0.85;
-        filter: brightness(85%);
         min-height: 100vh;
 
         #parallax-text {
-          opacity: 1;
+          /*opacity: 1;*/
+          color: #de7f1c;
 
           h1 {
-            filter: initial;
+            /*filter: initial;*/
           }
 
           .v-btn {
@@ -267,6 +291,10 @@ export default {
     #sobre-nos {
       .v-image {
         border-radius: 7px;
+      }
+      #footer-logo-img {
+        height: 300px;
+        width: 300px;
       }
     }
 

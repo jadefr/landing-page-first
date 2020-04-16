@@ -39,10 +39,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
- p {
-    &:hover{
-      cursor: pointer;
-      color: #715f58;
-    }
+  .footer-info-container {
+
+    p {
+      &:hover{
+        cursor: pointer;
+        color: #715f58;
+      }
+  }
  }
 </style>

@@ -72,12 +72,19 @@ export default {
   @import "../assets/sass/libraries/mixins";
 
   .service-card-container {
+    font-family: 'PT Sans', sans-serif;
+
+    #card-background {
+      opacity: 0.5;
+    }
+
     hr {
       color: white;
     }
 
     .v-image {
       border-radius: 7px;
+      border: white solid 1px;
     }
 
     .v-btn {
