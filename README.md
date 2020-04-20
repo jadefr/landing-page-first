@@ -44,3 +44,24 @@ As the testimonial varied greatly in amount of text, the heights should change a
           >
           </v-carousel>
 ```
+
+## Routes
+
+* / --> Home
+* /politica-de-privacidade --> Privacy Policy
+
+## Structure
+High level code of the orchestrator **App.vue**:
+
+```
+<v-app>
+            <v-app-bar>
+            <AppBarBtn/>
+            </v-app-bar>
+            
+            <router-link to ="/"></router-link>
+            <router-view/>
+            
+            <Footer/>
+</v-app>
+```
