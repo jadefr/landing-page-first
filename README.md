@@ -1,16 +1,20 @@
 # landing-page-first
+Template de uma página inicial
 
-## Project setup
-```
-npm install
-```
+## Tech Stack
+* Vue.js
+* Vuetify (Material Design)
+* SCSS
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Functional Requirements
+* FR1: Display a background image as header of 100vh
+* FR2: Darken the background image
+* FR3: Over the background image, display title, subtitle and a button
+* FR4: Present an About section, below the header, with some text and an image
+* RF5: Below the About Section, display a Services section
+* RF6: The Services section must comprise cards, which are composed of title (top), image (right-hand side), and text (left-hand side)
 
-### Compiles and minifies for production
+## Non Functional Requirements
 ```
 npm run build
 ```
