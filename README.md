@@ -33,7 +33,7 @@ As Vuetify does not present (to the date of 20/04/2020) responsive font size, th
 ```
 
 ### Carousel Items
-As the testimonial varied greatly in amount of text, the heights should change according for mobile viewport:
+As the testimonial varied greatly in amount of text, the heights should change accordingly for mobile viewport:
 
 ```
           <v-carousel
