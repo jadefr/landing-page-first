@@ -7,22 +7,16 @@ Template de uma página inicial
 * SCSS
 
 ## Functional Requirements
-* FR1: Display a background image as header of 100vh
-* FR2: Darken the background image
-* FR3: Over the background image, display title, subtitle and a button
-* FR4: Present an About section, below the header, with some text and an image
-* RF5: Below the About Section, display a Services section
+* FR1: The website must be composed of the following sections (in order): header, about, services, testimonials, parallax image above footer, and footer
+* FR2: Display a background image as header of 100vh
+* FR3: Darken the background image
+* F4: Over the background image, display title, subtitle and a button
+* FR5: Present an About section, with some text and an image
 * RF6: The Services section must comprise cards, which are composed of title (top), image (right-hand side), and text (left-hand side)
+* RF7: Present the testimonials as a carousel
+* RF8: The footer must contain the standard links and a logo
 
-## Non Functional Requirements
-```
-npm run build
-```
+## Non-Functional Requirements
+* RF1: Responsiveness
+* RF2: Use contrasting colors
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
