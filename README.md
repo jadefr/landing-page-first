@@ -68,4 +68,4 @@ High level code of the orchestrator **App.vue**:
 
 ## Architecture
 
-![Image of architecture](https://raw.githubusercontent.com/jadefr/ontology-testing/master/distinctio.png)
+![Image of architecture](https://raw.githubusercontent.com/jadefr/ontology-testing/master/landing-page.png)
