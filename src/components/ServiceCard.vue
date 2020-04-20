@@ -68,7 +68,7 @@ export default {
     }
   },
   created () {
-    if (this.$props.title === 'Curso Online') {
+    if (this.$props.title === 'Repellat Voluptate') {
       this.isCursoOnline = true
     }
   }

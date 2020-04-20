@@ -110,15 +110,15 @@ export default {
     ],
     contatoArray: [
       {
-        text: 'projetolucromaximo@gmail.com',
+        text: 'lorem@ipsum.io',
         link: ''
       },
       {
-        text: '(32)998009178',
+        text: '001110001101',
         link: ''
       },
       {
-        text: 'CNPJ: 11.808.611/0001-87',
+        text: 'Ipsam Ipsum Magnam',
         link: null
       }
     ],
@@ -135,6 +135,7 @@ export default {
       #footer-logo-img {
         height: 240px;
         width: 240px;
+        border-radius: 50%;
       }
     }
     #credits {

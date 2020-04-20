@@ -1,6 +1,5 @@
 <template>
   <div class="landing-page-view-container">
-
     <!-- Header -->
     <section class="header">
       <v-row
@@ -11,119 +10,123 @@
           <h1
             :class="[$vuetify.breakpoint.mdAndUp ? 'display-4 font-weight-medium mb-4' : 'display-3 font-weight-medium mb-4']"
           >
-            Projeto Lucro Máximo
+            Lorem Ipsum
           </h1>
           <h4
             :class="[$vuetify.breakpoint.mdAndUp ? 'display-1 font-regular mt-4' : 'headline font-regular mt-4']"
           >
-            Consultoria agropecuária
+            consectetur adipisicing elit
+
           </h4>
           <v-btn
-              class="mt-5"
-              outlined
-              dark
-              large
-              @click="$vuetify.goTo('#sobre-nos', linear, 900, -6)"
-            >
-              Conheça
-            </v-btn>
+            class="mt-5"
+            outlined
+            dark
+            large
+            @click="$vuetify.goTo('#sobre-nos', linear, 900, -6)"
+          >
+            Conheça
+          </v-btn>
         </v-col>
       </v-row>
     </section>
 
-  <!-- Sobre Nós -->
-  <section id="sobre-nos">
-    <v-row justify="center" class="text-center my-4 mx-3">
-      <v-col class="col-sm-12 col-md-10">
-        <!-- Title -->
-        <h1
-          :class="[$vuetify.breakpoint.mdAndUp ? 'display-1 font-weight-light mb-9' : 'headline font-weight-light mb-9']"
-        >
-          Sobre Nós
-        </h1>
-        <div class="sobre-nos-content">
-          <!-- Text -->
-          <p
-            :class="[$vuetify.breakpoint.mdAndUp ? 'title font-weight-light' : 'subtitle-1 font-weight-light']"
+    <!-- Sobre Nós -->
+    <section id="sobre-nos">
+      <v-row justify="center" class="text-center my-4 mx-3">
+        <v-col class="col-sm-12 col-md-10">
+          <!-- Title -->
+          <h1
+            :class="[$vuetify.breakpoint.mdAndUp ? 'display-1 font-weight-light mb-9' : 'headline font-weight-light mb-9']"
           >
-            O Projeto Lucro Máximo surgiu em 2010, com o intuito de difundir a tecnologia no campo, levando mais
-            conhecimento e tecnologia ao produtor.<br>
-            O projeto é dirigido por Adilson Esquerdo Ferreira, zootecnista, formado pela Universidade Federal Rural
-            do
-            Rio de Janeiro em 2007,
-            além de contar com o auxílio de outros profissionais da área agrícola (Médico Veterinário, Agrônomo,
-            Técnico
-            Agrícola e Administrador de empresas).
-          </p>
-          <!-- Image -->
-          <div id="footer-logo">
-            <v-col
-              align="center"
-              class="py-4"
+            Sobre Nós
+          </h1>
+          <div class="sobre-nos-content">
+            <!-- Text -->
+            <p
+              :class="[$vuetify.breakpoint.mdAndUp ? 'title font-weight-light' : 'subtitle-1 font-weight-light']"
             >
-              <v-img
-                class="my-3"
-                id="footer-logo-img"
-                src="../assets/img/logo.png"
-              ></v-img>
-            </v-col>
+              Aut consequatur cumque deleniti, eligendi enim fugit in ipsum iusto laudantium, modi nam odio officia
+              quibusdam ratione sit sunt vero? Ab accusantium asperiores assumenda, beatae, eius enim, est excepturi
+              itaque nobis nulla omnis pariatur quo voluptatibus.
+            </p>
+            <p
+              :class="[$vuetify.breakpoint.mdAndUp ? 'title font-weight-light' : 'subtitle-1 font-weight-light']"
+            >
+              Doloribus eum odio repellat? Amet asperiores deleniti hic laudantium rerum sequi ut voluptate? Animi
+              asperiores, at culpa dignissimos exercitationem, inventore laborum maxime nam necessitatibus officia
+              pariatur quos recusandae rerum sunt, veniam? Ad aliquid blanditiis deleniti dolor explicabo iusto,
+              laboriosam non praesentium quas quis reiciendis rem voluptas voluptates.
+            </p>
+            <!-- Image -->
+            <div id="footer-logo">
+              <v-col
+                align="center"
+                class="py-4"
+              >
+                <v-img
+                  class="my-3"
+                  id="footer-logo-img"
+                  src="../assets/img/logo.png"
+                ></v-img>
+              </v-col>
+            </div>
           </div>
-        </div>
-      </v-col>
-    </v-row>
-  </section>
+        </v-col>
+      </v-row>
+    </section>
 
-  <!-- Serviços -->
-  <section id="servicos" class="mt-10">
-    <!-- Card -->
-    <ServiceCard
-      v-for="(obj, key) in services" :key="key"
-      :background="color(obj.color)"
-      :title="obj.title"
-      :img="img(obj.img)"
-      :text="obj.text"
-      :font-color="fontColor"
-    />
-  </section>
+    <!-- Serviços -->
+    <section id="servicos" class="mt-10">
+      <!-- Card -->
+      <ServiceCard
+        v-for="(obj, key) in services" :key="key"
+        :background="color(obj.color)"
+        :title="obj.title"
+        :img="img(obj.img)"
+        :text="obj.text"
+        :font-color="fontColor"
+      />
+    </section>
 
-  <!-- Depoimentos -->
-  <section id="depoimentos">
-    <v-row class="text-center my-4 mx-10 " id="depoimentos-row">
-      <v-col
-        id="depoimentos-col"
-      >
-        <!-- Title -->
-        <h1 class="display-1 font-weight-light mt-9 mb-9">Depoimentos</h1>
-
-        <!-- Carousel -->
-        <v-carousel
-          :height="[$vuetify.breakpoint.mdAndUp ? '600' : 'this.$props.height']"
-          cycle
-          interval="10000"
-          hide-delimiters
+    <!-- Depoimentos -->
+    <section id="depoimentos">
+      <v-row class="text-center my-4 mx-10 " id="depoimentos-row">
+        <v-col
+          id="depoimentos-col"
         >
-          <v-carousel-item
-            v-for="(obj, key) in testimonials" :key="key"
-          >
-            <Testimonial
-              :text="obj.text"
-              :img="img(obj.img)"
-              :name="obj.name"
-              :position="obj.position"
-            />
-          </v-carousel-item>
-        </v-carousel>
-      </v-col>
-    </v-row>
-  </section>
+          <!-- Title -->
+          <h1 class="display-1 font-weight-light my-9">Depoimentos</h1>
 
-  <!-- Parallax -->
-  <v-parallax
-    height="500"
-    dark
-    src="../assets/img/img-footer.jpg"
-  >
-  </v-parallax>
+          <!-- Carousel -->
+          <v-carousel
+            :height="[$vuetify.breakpoint.mdAndUp ? '500' : 'this.$props.height']"
+            cycle
+            interval="10000"
+            hide-delimiters
+          >
+            <v-carousel-item
+              v-for="(obj, key) in testimonials" :key="key"
+            >
+              <Testimonial
+                :text="obj.text"
+                :img="img(obj.img)"
+                :name="obj.name"
+                :position="obj.position"
+              />
+            </v-carousel-item>
+          </v-carousel>
+        </v-col>
+      </v-row>
+    </section>
+
+    <!-- Parallax -->
+    <v-parallax
+      height="500"
+      dark
+      src="../assets/img/img-footer.jpg"
+    >
+    </v-parallax>
   </div>
 </template>
 
@@ -143,56 +146,55 @@ export default {
       isActive: false,
       services: [
         {
-          title: 'Assistência Técnica Mensal',
-          text: 'Consultorias semanais ou quinzenais na área da pecuária de leite e/ou pecuária de corte',
+          title: 'Amet Enim et Iure',
+          text: 'Placeat quo reiciendis, rem repellat sapiente sunt tempore tenetur totam voluptatum',
           color: 'green',
           img: 'assistencia'
         },
         {
-          title: 'Projeto de Pastejo',
-          text: 'Utilização de dejetos do curral nas pastagens via motobomba ou gravidade, \n' +
-            'visando o aumento da fertilidade do solo e da produtividade da forrageira escolhida',
+          title: 'Labore Neque Nobis',
+          text: 'Perspiciatis quaerat quam quas quibusdam quos reiciendis repudiandae sed similique tempore velit vero',
           color: 'maroon',
           img: 'pastejo'
         },
         {
-          title: 'Projeto de Crédito Rural',
-          text: 'Projetos para o produtor na Caixa Econômica Federal, Banco do Brasil ou Sicoob',
+          title: 'Nulla Provident',
+          text: 'Facere iusto nesciunt nulla perferendis quisquam reprehenderit similique vel? Ab alias dolores eius eveniet labore laborum odio sint sit velit vero',
           color: 'green',
           img: 'credito'
         },
         {
-          title: 'Curso Online',
-          text: 'Oferecemos conhecimento técnico aos produtores e trabalhadores rurais e capacitação dos técnicos ligados ao meio rural,  \n' +
-              'com o intuito de levar mais tecnologia e conhecimento ao campo.\n',
+          title: 'Repellat Voluptate',
+          text: 'Sed velit voluptatibus? Aliquam consectetur, consequatur culpa debitis eaque earum enim ipsa ipsum laudantium magnam',
           color: 'maroon',
           img: 'curso'
         }
       ],
       testimonials: [
         {
-          text: '<q>Tive uma grande honra de poder estagiar com o Adilson; o principal aprendizado foi o amor e a determinação que ele tem pela profissão e pelo seu trabalho. <br/>Realmente é uma pessoa que respira a zootecnia.<br/> Ao longo desses anos sempre me inspirei muito nele.</q>',
+          text: '<q> Aut consequatur cumque deleniti, eligendi enim fugit in ipsum iusto laudantium, modi nam odio officia quibusdam ratione sit sunt vero? Ab accusantium asperiores assumenda, beatae, eius enim, est excepturi itaque nobis nulla omnis pariatur quo voluptatibus.<br>Aliquid dolores dolorum, ex expedita facilis, ipsam ipsum magnam, maxime neque quam quisquam rerum? A alias aliquam, debitis dolore dolorem ducimus ea eaque earum esse expedita fugit itaque minima natus nemo odit quasi recusandae rem tempore ullam veniam\n</q>',
           img: 'rodrigo-lima-granato',
-          name: '<strong>Rodrigo Lima Granato</strong>',
-          position: '<br>Consultor técnico de bovinos de corte da Agroceres, em Barra do Garças - MT'
+          name: '<strong>Antoninus Pius</strong>',
+          position: '<br>Eligendi enim fugit in ipsum iusto'
         },
         {
-          text: '<q>Após um período da aplicação de seus sábios ensinamento na Fazenda Sucupira, hoje estamos colhendo frutos representados pelas arrobas de boi excessivas, em vista principalmente do resultado do capim que ao receber o devido tratamento traduziu-se no  hoje festejado resultado positivo da atividade. <br/> Sua assistência marcou um novo e promissor destino em nossas propriedades.</q>',
+          text: '<q> Accusamus alias cum cumque inventore ipsam itaque labore magni, provident sequi similique temporibus, velit voluptate voluptates. <br> Aliquid dolores dolorum, ex expedita facilis, ipsam ipsum magnam, maxime neque quam quisquam rerum? A alias aliquam, debitis dolore dolorem ducimus ea eaque earum esse expedita fugit itaque minima natus nemo odit quasi recusandae rem tempore ullam veniam<br> Alias consectetur cum cupiditate ducimus illum impedit, laboriosam, minima minus non, nulla odio pariatur sit Amet, aut culpa dignissimos dolor eos et hic iure labore laudantium nam natus obcaecati officiis pariatur perferendis quae quia, quis quod, recusandae sint suscipit tempore ullam unde vel velit veniam</q>',
           img: 'jose-manuel-tiago',
-          name: '<strong>José Manoel Tiago Bittencourt</strong>',
-          position: '<br>Advogado e pecuarista'
+          name: '<strong>Lucius Verus</strong>',
+          position: '<br>Amet asperiores deleniti hic laudantium rerum'
         },
         {
-          text: '<q>Há 3 anos iniciamos um trabalho voltado na produção de leite, no qual iniciamos um parceira de sucesso junto a empresa  Lucro Máximo, no qual o Adilson nos orientou e vem nos dando total apoio não só para desenvolver o sistema, desde os cuidados  com rebanho e plantio, como todo o sistema geral da fazenda.<br/> Começamos com 100 litros dia até chegarmos a 1400 litros dia. <br/>Só tenho a agradecer a parceria da empresa Lucro Máximo e da pessoa maravilhosa que é Sr Adilson; total companheirismo e dedicação para que possamos alcançar nosso objetivo.<br/> Todas as tomadas de decisões ele sempre presente e nos orientando da melhor forma possível.<br/> Muito obrigado Lucro Máximo e ao Sr Adilson Ferreira.</q>',
+          text: '<q>Doloribus eum odio repellat? Amet asperiores deleniti hic laudantium rerum sequi ut voluptate? Animi asperiores, at culpa dignissimos exercitationem, inventore laborum maxime nam necessitatibus officia pariatur quos recusandae rerum sunt, veniam? Ad aliquid blanditiis deleniti dolor explicabo iusto, laboriosam non praesentium quas quis reiciendis rem voluptas voluptates Assumenda autem deserunt quia quidem rem\n' +
+            '<br> Aliquid dolores dolorum, ex expedita facilis, ipsam ipsum magnam, maxime neque quam quisquam rerum? A alias aliquam, debitis dolore dolorem ducimus ea eaque earum esse expedita fugit itaque minima natus nemo odit quasi recusandae rem tempore ullam veniam\n <br> Accusamus alias cum cumque inventore ipsam itaque labore magni, provident sequi similique temporibus, velit voluptate voluptates</q>',
           img: 'carlos-joel',
-          name: '<strong>Carlos Joel</strong>',
-          position: '<br>Sócio na fazenda Santa Edwiges, em Santos Dumont - MG'
+          name: '<strong>Marcus Aurelius</strong>',
+          position: '<br> Aut delectus ea error nisi'
         },
         {
-          text: '<q>Ano passado [2019] fui informado que o Adilson estava desenvovendo projeto para credito rural.<br>Então fui até o sindicato de sapucaia estive com ele. Ele me orientou quais documentos eram necessários. <br>Na próxima semana voltei. E ele montou o projeto muito rapido, muito detalhado e com muita boa vontade. <br>Fui muito bem atendido. O banco aprovou o projeto na hora. <br>Muito obrigado pelo teu serviço e tua boa vontade, Adilson</q>.',
+          text: '<q>Accusamus alias cum cumque inventore ipsam itaque labore magni, provident sequi similique temporibus, velit voluptate voluptates. <br> Commodi cupiditate dolorem enim eos laudantium libero minima minus nobis numquam officiis omnis placeat quo reiciendis, rem repellat sapiente sunt tempore tenetur totam voluptatum</q>.',
           img: 'mauricio',
-          name: '<strong>Maurício Assumpção Ribeiro</strong>',
-          position: '<br>Agricultor, Sapucaia - RJ'
+          name: '<strong>Magnus Maximus</strong>',
+          position: '<br>quos reiciendis repudiandae sed similique tempore velit vero'
         }
       ],
       carousel: [
@@ -212,7 +214,7 @@ export default {
     color (obj) {
       let color = ''
       if (obj.includes('green')) {
-        color = '#004d40'
+        color = '#62050b'
         this.fontColor = 'white'
       } else {
         color = '#ffeccc'
@@ -243,6 +245,7 @@ export default {
 
   body, html {
     font-family: 'Ubuntu', sans-serif !important;
+
     .header {
       background-image: url("../assets/img/bg.png");
     }

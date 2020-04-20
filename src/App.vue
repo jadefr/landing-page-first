@@ -6,7 +6,7 @@
       app
       dense
       dark
-      color="teal darken-4"
+      color="#62050b"
       id="navbar"
     >
       <!-- Icon -->
@@ -37,9 +37,6 @@
         :item-text="obj.itemText"
       />
     </v-app-bar>
-<!--    <v-content>-->
-<!--      <LandingPage/>-->
-<!--    </v-content>-->
 
     <!-- Router Link -->
     <router-link to="/"></router-link>
@@ -52,7 +49,6 @@
 </template>
 
 <script>
-// import LandingPage from './views/LandingPage'
 import Footer from './views/Footer'
 import AppBarBtn from './components/AppBarBtn'
 
@@ -61,7 +57,6 @@ export default {
   components: {
     AppBarBtn,
     Footer
-    // LandingPage
   },
   data () {
     return {
