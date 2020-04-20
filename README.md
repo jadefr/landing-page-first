@@ -65,3 +65,7 @@ High level code of the orchestrator **App.vue**:
             <Footer/>
 </v-app>
 ```
+
+## Architecture
+
+![Image of architecture](https://raw.githubusercontent.com/jadefr/ontology-testing/master/distinctio.png)
