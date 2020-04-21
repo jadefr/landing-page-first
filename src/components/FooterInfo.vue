@@ -12,13 +12,39 @@
         justify="left"
         tile
       >
-        <v-card-text class="subtitle-1 font-weight-light">
+<!--        <v-card-text class="subtitle-1 font-weight-light">-->
+<!--          <p-->
+<!--            ref="button"-->
+<!--            v-for="item in items" :key="item"-->
+<!--            @click="$vuetify.goTo(item.link, linear, 900, -6)"-->
+<!--          >-->
+<!--           {{ item.text }}-->
+<!--          </p>-->
+<!--        </v-card-text>-->
+
+        <!-- test -->
+        <v-card-text class="subtitle-1 font-weight-light"
+          v-if="isMapaDoSite"
+        >
           <p
             ref="button"
             v-for="item in items" :key="item"
             @click="$vuetify.goTo(item.link, linear, 900, -6)"
           >
-           {{ item.text }}
+            {{ item.text }}
+          </p>
+          <a href="/politica-de-privacidade" target="_blank" style="text-decoration: none; color: white"><p>Política de Privacidade</p></a>
+        </v-card-text>
+
+        <v-card-text class="subtitle-1 font-weight-light"
+                     v-if="isContato"
+        >
+          <p
+            ref="button"
+            v-for="item in items" :key="item"
+            @click="$vuetify.goTo(item.link, linear, 900, -6)"
+          >
+            {{ item.text }}
           </p>
         </v-card-text>
       </v-row>
@@ -33,6 +59,26 @@ export default {
     items: {
       link: String,
       text: String
+    }
+  },
+  data () {
+    return {
+      isPrivacyPolicy: false,
+      isMapaDoSite: false,
+      isContato: false
+    }
+  },
+  created () {
+    for (let i = 0; i < this.$props.items.length; i++) {
+      if (this.$props.items[i].text === 'Política de Privacidade') {
+        this.isPrivacyPolicy = true
+      }
+    }
+    if (this.$props.title === 'Mapa do Site') {
+      this.isMapaDoSite = true
+    }
+    if (this.$props.title === 'Contato') {
+      this.isContato = true
     }
   }
 }

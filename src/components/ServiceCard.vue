@@ -41,7 +41,7 @@
           <v-btn class="mt-3 mb-5" outlined color="white" dark large
                  v-if="isCursoOnline"
           >
-            <a href="http://cursos.sgfaz.com/producao_milho/" target="_blank" style="text-decoration: none; color: white">
+            <a href="" target="_blank" style="text-decoration: none; color: white">
               Inscreva-se
             </a>
           </v-btn>

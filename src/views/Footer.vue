@@ -17,6 +17,12 @@
             :title="mapaDoSite"
             :items="mapaDoSiteArray"
           />
+          <!-- Privacy Policy -->
+<!--          <p-->
+<!--            ref="button"-->
+<!--          >-->
+<!--            <a href="/politica-de-privacidade">TEXTO</a>-->
+<!--          </p>-->
 
         <!-- Contato -->
           <FooterInfo
@@ -44,6 +50,7 @@
             </a>
           </v-lazy>
         </div>
+
       </v-col>
       </div>
 
@@ -102,11 +109,11 @@ export default {
       {
         text: 'Depoimentos',
         link: '#depoimentos'
-      },
-      {
-        text: 'Política de Privacidade',
-        link: '/politica-de-privacidade'
       }
+      // {
+      //   text: 'Política de Privacidade',
+      //   link: '/politica-de-privacidade'
+      // }
     ],
     contatoArray: [
       {
