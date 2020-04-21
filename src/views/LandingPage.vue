@@ -79,13 +79,41 @@
     <!-- Serviços -->
     <section id="servicos" class="mt-10">
       <!-- Card -->
+<!--      <ServiceCard-->
+<!--        v-for="(obj, key) in services" :key="key"-->
+<!--        :background="color(obj.color)"-->
+<!--        :title="obj.title"-->
+<!--        :img="img(obj.img)"-->
+<!--        :text="obj.text"-->
+<!--        :font-color="fontColor"-->
+<!--      />-->
       <ServiceCard
-        v-for="(obj, key) in services" :key="key"
-        :background="color(obj.color)"
-        :title="obj.title"
-        :img="img(obj.img)"
-        :text="obj.text"
-        :font-color="fontColor"
+        :background="services[0].color"
+        :title="services[0].title"
+        :img="img(services[0].img)"
+        :text="services[0].text"
+        :font-color="services[0].fontColor"
+      />
+      <ServiceCard
+        :background="services[1].color"
+        :title="services[1].title"
+        :img="img(services[1].img)"
+        :text="services[1].text"
+        :font-color="services[1].fontColor"
+      />
+      <ServiceCard
+        :background="services[2].color"
+        :title="services[2].title"
+        :img="img(services[2].img)"
+        :text="services[2].text"
+        :font-color="services[2].fontColor"
+      />
+      <ServiceCard
+        :background="services[3].color"
+        :title="services[3].title"
+        :img="img(services[3].img)"
+        :text="services[3].text"
+        :font-color="services[3].fontColor"
       />
     </section>
 
@@ -148,26 +176,30 @@ export default {
         {
           title: 'Amet Enim et Iure',
           text: 'Placeat quo reiciendis, rem repellat sapiente sunt tempore tenetur totam voluptatum',
-          color: 'green',
-          img: 'assistencia'
+          color: '#62050b',
+          img: 'assistencia',
+          fontColor: 'white'
         },
         {
           title: 'Labore Neque Nobis',
           text: 'Perspiciatis quaerat quam quas quibusdam quos reiciendis repudiandae sed similique tempore velit vero',
-          color: 'maroon',
-          img: 'pastejo'
+          color: '#ffeccc',
+          img: 'pastejo',
+          fontColor: '#392f24'
         },
         {
           title: 'Nulla Provident',
           text: 'Facere iusto nesciunt nulla perferendis quisquam reprehenderit similique vel? Ab alias dolores eius eveniet labore laborum odio sint sit velit vero',
-          color: 'green',
-          img: 'credito'
+          color: '#62050b',
+          img: 'credito',
+          fontColor: 'white'
         },
         {
           title: 'Repellat Voluptate',
           text: 'Sed velit voluptatibus? Aliquam consectetur, consequatur culpa debitis eaque earum enim ipsa ipsum laudantium magnam',
-          color: 'maroon',
-          img: 'curso'
+          color: '#ffeccc',
+          img: 'curso',
+          fontColor: '#392f24'
         }
       ],
       testimonials: [
