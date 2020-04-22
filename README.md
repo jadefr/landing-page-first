@@ -6,7 +6,10 @@ Template de uma página inicial
 * Vuetify (Material Design)
 * SCSS
 
-## Functional Requirements
+## Requirements
+Functional and non-functional requirements are presented below.
+
+### Functional Requirements
 * FR1: The website must be composed of the following sections (in order): header, about, services, testimonials, parallax image above footer, and footer
 * FR2: Display a background image as header of 100vh
 * FR3: Darken the background image
@@ -16,11 +19,13 @@ Template de uma página inicial
 * FR7: Present the testimonials as a carousel
 * FR8: The footer must contain the standard links and a logo
 
-## Non-Functional Requirements
+### Non-Functional Requirements
 * NFR1: Responsiveness
 * NFR2: Use contrasting colors
 
 ## Responsiveness
+Below it is described how some elements respond to the change of viewport size.
+
 ### Font Size
 As Vuetify does not present (to the date of 20/04/2020) responsive font size, the following js trick was used to set the font size to **title** for the breakpoint *md* and below and set to **subtitle-1** for above *md*
 
