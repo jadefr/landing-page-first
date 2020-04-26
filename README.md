@@ -27,7 +27,7 @@ Functional and non-functional requirements are presented below.
 Below it is described how some elements respond to the change of viewport size.
 
 ### Font Size
-As Vuetify does not present (to the date of 20/04/2020) responsive font size, the following js trick was used to set the font size to **title** for the breakpoint *md* and below and set to **subtitle-1** for above *md*
+As Vuetify does not present (to the date of 20/04/2020) responsive font size, the following js trick was used to set the font size to **title** for the breakpoint *md and below* and to set it to **subtitle-1** otherwise.
 
 ```
             <p
