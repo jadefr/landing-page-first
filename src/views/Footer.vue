@@ -17,12 +17,6 @@
             :title="mapaDoSite"
             :items="mapaDoSiteArray"
           />
-          <!-- Privacy Policy -->
-<!--          <p-->
-<!--            ref="button"-->
-<!--          >-->
-<!--            <a href="/politica-de-privacidade">TEXTO</a>-->
-<!--          </p>-->
 
         <!-- Contato -->
           <FooterInfo
@@ -75,7 +69,7 @@
       <!-- Credits -->
       <v-card>
         <v-card-text class="white--text mt-1 font-weight-light" id="credits">
-          <p><a href="https://jadeferreira.com.br/" target="_blank">Desenvolvido por Jade Ferreira</a></p>
+          <p>Desenvolvido por <a href="https://jadeferreira.com.br/" target="_blank">Jade Ferreira</a></p>
         </v-card-text>
       </v-card>
     </v-card>
@@ -152,10 +146,10 @@ export default {
 
         a {
           text-decoration: none;
-          color: inherit;
+          color: #d40b17;
 
           &:hover {
-            color: #3a4b40;
+            color: #715f58;
           }
         }
       }

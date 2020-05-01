@@ -12,17 +12,7 @@
         justify="left"
         tile
       >
-<!--        <v-card-text class="subtitle-1 font-weight-light">-->
-<!--          <p-->
-<!--            ref="button"-->
-<!--            v-for="item in items" :key="item"-->
-<!--            @click="$vuetify.goTo(item.link, linear, 900, -6)"-->
-<!--          >-->
-<!--           {{ item.text }}-->
-<!--          </p>-->
-<!--        </v-card-text>-->
-
-        <!-- test -->
+        <!-- Mapa do Site -->
         <v-card-text class="subtitle-1 font-weight-light"
           v-if="isMapaDoSite"
         >
@@ -36,6 +26,7 @@
           <a href="/politica-de-privacidade" target="_blank" style="text-decoration: none; color: white"><p>Política de Privacidade</p></a>
         </v-card-text>
 
+        <!-- Contato -->
         <v-card-text class="subtitle-1 font-weight-light"
                      v-if="isContato"
         >
