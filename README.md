@@ -6,23 +6,28 @@ Template de uma página inicial
 * Vuetify (Material Design)
 * SCSS
 
-## Functional Requirements
+## Requirements
+Functional and non-functional requirements are presented below.
+
+### Functional Requirements
 * FR1: The website must be composed of the following sections (in order): header, about, services, testimonials, parallax image above footer, and footer
 * FR2: Display a background image as header of 100vh
 * FR3: Darken the background image
-* F4: Over the background image, display title, subtitle and a button
+* FR4: Over the background image, display title, subtitle and a button
 * FR5: Present an About section, with some text and an image
-* RF6: The Services section must comprise cards, which are composed of title (top), image (right-hand side), and text (left-hand side)
-* RF7: Present the testimonials as a carousel
-* RF8: The footer must contain the standard links and a logo
+* FR6: The Services section must comprise cards, which are composed of title (top), image (right-hand side), and text (left-hand side)
+* FR7: Present the testimonials as a carousel
+* FR8: The footer must contain the standard links and a logo
 
-## Non-Functional Requirements
-* RF1: Responsiveness
-* RF2: Use contrasting colors
+### Non-Functional Requirements
+* NFR1: Responsiveness
+* NFR2: Use contrasting colors
 
 ## Responsiveness
+Below it is described how some elements respond to the change of viewport size.
+
 ### Font Size
-As Vuetify does not present (to the date of 20/04/2020) responsive font size, the following js trick was used to set the font size to **title** for the breakpoint *md* and below and set to **subtitle-1** for above *md*
+As Vuetify does not present (to the date of 20/04/2020) responsive font size, the following js trick was used to set the font size to **title** for the breakpoint *md and below* and to set it to **subtitle-1** otherwise.
 
 ```
             <p
@@ -68,4 +73,4 @@ High level code of the orchestrator **App.vue**:
 
 ## Architecture
 
-![Image of architecture](https://raw.githubusercontent.com/jadefr/ontology-testing/master/landing-page.png)
+![Image of architecture](https://raw.githubusercontent.com/jadefr/ontology-testing/master/lorem-ipsum.png)
