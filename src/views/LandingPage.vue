@@ -6,7 +6,7 @@
         align="center"
         justify="center"
       >
-        <v-col class="text-center px-4" id="header-text">
+        <v-col class="text-center px-8 " id="header-text">
           <h1
             :class="[$vuetify.breakpoint.mdAndUp ? 'display-4 font-weight-medium mb-4' : 'display-3 font-weight-medium mb-4']"
           >
@@ -280,6 +280,8 @@ export default {
 
     .header {
       background-image: url("../assets/img/bg.png");
+      background-size: cover;
+      background-position: center center;
     }
   }
 
