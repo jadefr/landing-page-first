@@ -115,7 +115,7 @@ export default {
         link: ''
       },
       {
-        text: '001110001101',
+        text: '1011001100',
         link: ''
       },
       {
